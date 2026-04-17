@@ -41,6 +41,28 @@
         .card-shadow {
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
         }
+
+        /* --- TICKER SECTION STYLES --- */
+        .ticker-wrap {
+            width: 100%;
+            overflow: hidden;
+            background-color: #f8fafc;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .ticker {
+            display: inline-block;
+            white-space: nowrap;
+            padding-right: 100%;
+            animation: ticker 45s linear infinite;
+        }
+        @keyframes ticker {
+            0% { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(-100%, 0, 0); }
+        }
+        .ticker:hover {
+            animation-play-state: paused;
+        }
+        /* --- END TICKER SECTION STYLES --- */
     </style>
 </head>
 <body class="pb-12 bg-gray-50">
@@ -67,7 +89,7 @@
                     <div class="flex items-center mt-0.5">
                         <div class="w-2 h-2 bg-green-500 rounded-full pulse-green mr-2"></div>
                         <p class="text-[10px] text-green-400 font-medium leading-none uppercase tracking-wider">
-                            Active System <span class="text-slate-400 mx-1">|</span> Last Update: 04/16/26 |</span> Extraordinary report: more production storage has been granted to Petrolera Roraima
+                            Active System <span class="text-slate-400 mx-1">|</span> Last Update: 04/17/26 |</span> 2nd Anniversary Milestone Reached
                         </p>
                     </div>
                 </div>
@@ -76,18 +98,38 @@
             <!-- Date and Version Info -->
             <div class="flex items-center space-x-8">
                 <div class="text-right border-l border-slate-700 pl-4">
-                    <p class="text-[10px] text-slate-400 uppercase font-semibold">Thursday, 04/16/2026</p>
+                    <p class="text-[10px] text-slate-400 uppercase font-semibold">Friday, 04/17/2026</p>
                     <p class="text-[11px] font-black text-accent tracking-tighter">BETA VERSION</p>
                 </div>
             </div>
         </div>
     </header>
 
+    <!-- --- START TICKER SECTION --- -->
+    <div class="ticker-wrap bg-slate-100 py-2 border-b border-slate-300">
+        <div class="ticker">
+            <span class="text-[11px] font-bold text-slate-700 uppercase tracking-tight">
+                <i class="fas fa-certificate text-accent mr-2"></i>
+                April 17, 2026: Celebrating the 2nd Anniversary of the Joint Venture "Petrolera Roraima S.A." — A strategic partnership between PDVSA CVP and A&B Oil and Gas.
+                <span class="mx-8 text-slate-300">|</span>
+                <i class="fas fa-trophy text-blue-600 mr-2"></i>
+                Congratulations to the entire workforce for the outstanding milestones achieved in crude production and the progression of the Upgrader Enhancement Plan.
+                <span class="mx-8 text-slate-300">|</span>
+                <i class="fas fa-tools text-orange-600 mr-2"></i>
+                We rely on your steadfast commitment as we transition toward the upcoming Infill Drilling Campaign and the full commissioning of the Upgrader facilities.
+                <span class="mx-8 text-slate-300">|</span>
+                <i class="fas fa-burn text-red-600 mr-2"></i>
+                Safety, Production, and Reliability: Powering the Future of Petrolera Roraima.
+            </span>
+        </div>
+    </div>
+    <!-- --- END TICKER SECTION --- -->
+
     <main class="container mx-auto px-4 mt-4">
         
         <!-- Mobile Mode Alert -->
         <div class="sm:hidden mb-4 bg-blue-600 text-white text-[10px] font-bold py-1 px-3 rounded-full text-center">
-            MODE: BETA VERSION | 04/16/2026
+            MODE: 2ND ANNIVERSARY SPECIAL | 04/17/2026
         </div>
 
         <!-- Primary KPIs -->
@@ -432,7 +474,7 @@
             <p class="text-[10px] font-black text-slate-600 uppercase tracking-widest">Planning Management</p>
             <p class="text-[9px] text-slate-400 uppercase">E.M. Petrolera Roraima S.A.</p>
             <p class="mt-2 text-[8px] text-blue-500 font-bold italic border border-blue-200 inline-block px-2 py-0.5 rounded uppercase">
-                Updated: 04/16/2026 - Daily Operational Report
+                Updated: 04/17/2026 - Daily Operational Report
             </p>
         </div>
     </footer>
