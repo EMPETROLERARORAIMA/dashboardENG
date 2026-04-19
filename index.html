@@ -75,30 +75,31 @@
         
         .chart-container {
             position: relative;
-            height: 300px;
+            height: 350px;
             width: 100%;
         }
     </style>
 </head>
 <body class="text-slate-800">
 
-    <!-- Header -->
+    <!-- Encabezado -->
     <header class="bg-primary text-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-4">
             <div class="flex items-center space-x-4">
                 <div class="bg-blue p-1 rounded-md">
-                    <img src="https://i.postimg.cc/ZRc8VKdN/logo2.png" alt="A&B Oil and Gas Logo" class="banner-logo">
+                    <img src="https://i.postimg.cc/ZRc8VKdN/logo2.png" alt="Logo A&B Oil and Gas" class="banner-logo">
                 </div>
                 <div class="border-l border-slate-600 pl-4 header-info">
                     <h1 class="text-base md:text-lg font-bold uppercase leading-tight tracking-tight">Petrolera Roraima S.A.</h1>
                     <div class="flex items-center mt-0.5">
                         <div class="w-2 h-2 bg-green-500 rounded-full pulse-green mr-2"></div>
-                        <p class="text-[10px] text-green-400 font-medium leading-none uppercase tracking-wider">System Active | 04/18/2026</p>
+                        <p class="text-[10px] text-green-400 font-medium leading-none uppercase tracking-wider">Sistema Activo | 18/04/2026</p>
                     </div>
                 </div>
             </div>
         </div>
     </header>
+
 
     <main class="container mx-auto px-4 py-6 md:py-10 pb-16">
         
@@ -143,9 +144,21 @@
 
         <!-- Production Chart -->
         <div class="bg-white p-4 md:p-6 rounded-xl shadow-md border border-slate-200 mb-10">
-            <h2 class="text-xs md:text-sm font-black text-primary mb-4 uppercase tracking-widest flex items-center">
-                <i class="fas fa-chart-area mr-2 text-accent"></i> Crude Oil Production History 2026 (MBD)
-            </h2>
+            <div class="flex flex-col md:flex-row md:items-center justify-between mb-6 gap-2">
+                <h2 class="text-xs md:text-sm font-black text-primary uppercase tracking-widest flex items-center">
+                    <i class="fas fa-chart-line mr-2 text-accent"></i> POA vs Real Production - H1 2026 (MBD)
+                </h2>
+                <div class="flex gap-4">
+                    <div class="flex items-center gap-2">
+                        <span class="w-3 h-3 bg-primary rounded-full"></span>
+                        <span class="text-[10px] font-bold text-slate-500">REAL</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="w-3 h-3 border-2 border-slate-400 bg-white rounded-full"></span>
+                        <span class="text-[10px] font-bold text-slate-500">POA</span>
+                    </div>
+                </div>
+            </div>
             <div class="chart-container">
                 <canvas id="productionChart"></canvas>
             </div>
@@ -298,76 +311,143 @@
     <footer class="bg-slate-800 text-center py-8 text-slate-400 text-[10px] uppercase font-bold tracking-[0.2em]">
         <div class="container mx-auto px-4">
             <p>Testing Version - Planning Management Petrolera Roraima</p>
-            <p class="mt-1">&copy; 2026 A&B Oil and Gas Energy Solutions</p>
+            <p class="mt-1">&copy; 2026 A&B Oil and Gas</p>
         </div>
     </footer>
 
     <script>
         const ctx = document.getElementById('productionChart').getContext('2d');
         
-        const rawData = [
-            {f: "01/01/26", v: 18.046}, {f: "02/01/26", v: 18.088}, {f: "03/01/26", v: 18.309}, {f: "04/01/26", v: 14.476}, {f: "05/01/26", v: 14.512},
-            {f: "06/01/26", v: 14.090}, {f: "07/01/26", v: 14.052}, {f: "08/01/26", v: 14.043}, {f: "09/01/26", v: 14.514}, {f: "10/01/26", v: 14.057},
-            {f: "11/01/26", v: 14.022}, {f: "12/01/26", v: 14.185}, {f: "13/01/26", v: 14.612}, {f: "14/01/26", v: 14.043}, {f: "15/01/26", v: 0.745},
-            {f: "16/01/26", v: 0}, {f: "17/01/26", v: 0}, {f: "18/01/26", v: 0}, {f: "19/01/26", v: 0}, {f: "20/01/26", v: 0},
-            {f: "21/01/26", v: 0}, {f: "22/01/26", v: 0}, {f: "23/01/26", v: 0}, {f: "24/01/26", v: 0}, {f: "25/01/26", v: 0},
-            {f: "26/01/26", v: 0}, {f: "27/01/26", v: 0}, {f: "28/01/26", v: 4.211}, {f: "29/01/26", v: 12.218}, {f: "30/01/26", v: 15.546},
-            {f: "31/01/26", v: 16.062}, {f: "01/02/26", v: 14.534}, {f: "02/02/26", v: 13.666}, {f: "03/02/26", v: 15.245}, {f: "04/02/26", v: 16.069},
-            {f: "05/02/26", v: 18.088}, {f: "06/02/26", v: 18.691}, {f: "07/02/26", v: 19.542}, {f: "08/02/26", v: 18.429}, {f: "09/02/26", v: 18.513},
-            {f: "10/02/26", v: 18.713}, {f: "11/02/26", v: 19.439}, {f: "12/02/26", v: 18.502}, {f: "13/02/26", v: 18.562}, {f: "14/02/26", v: 18.625},
-            {f: "15/02/26", v: 18.682}, {f: "16/02/26", v: 20.057}, {f: "17/02/26", v: 20.079}, {f: "18/02/26", v: 20.108}, {f: "19/02/26", v: 20.100},
-            {f: "20/02/26", v: 20.095}, {f: "21/02/26", v: 20.116}, {f: "22/02/26", v: 20.089}, {f: "23/02/26", v: 20.251}, {f: "24/02/26", v: 20.385},
-            {f: "25/02/26", v: 20.992}, {f: "26/02/26", v: 20.311}, {f: "27/02/26", v: 20.196}, {f: "28/02/26", v: 20.109}, {f: "01/03/26", v: 20.308},
-            {f: "02/03/26", v: 20.735}, {f: "03/03/26", v: 20.371}, {f: "04/03/26", v: 20.454}, {f: "05/03/26", v: 20.531}, {f: "06/03/26", v: 21.569},
-            {f: "07/03/26", v: 21.428}, {f: "08/03/26", v: 21.532}, {f: "09/03/26", v: 21.042}, {f: "10/03/26", v: 22.502}, {f: "11/03/26", v: 23.334},
-            {f: "12/03/26", v: 23.604}, {f: "13/03/26", v: 24.070}, {f: "14/03/26", v: 24.022}, {f: "15/03/26", v: 24.067}, {f: "16/03/26", v: 24.031},
-            {f: "17/03/26", v: 24.535}, {f: "18/03/26", v: 24.466}, {f: "19/03/26", v: 24.529}, {f: "20/03/26", v: 24.610}, {f: "21/03/26", v: 24.637},
-            {f: "22/03/26", v: 24.615}, {f: "23/03/26", v: 24.070}, {f: "24/03/26", v: 24.086}, {f: "25/03/26", v: 24.060}, {f: "26/03/26", v: 24.275},
-            {f: "27/03/26", v: 24.220}, {f: "28/03/26", v: 24.216}, {f: "29/03/26", v: 24.266}, {f: "30/03/26", v: 24.527}, {f: "31/03/26", v: 24.629},
-            {f: "01/04/26", v: 24.432}, {f: "02/04/26", v: 24.405}, {f: "03/04/26", v: 24.440}, {f: "04/04/26", v: 24.730}, {f: "05/04/26", v: 24.451},
-            {f: "06/04/26", v: 24.687}, {f: "07/04/26", v: 24.718}, {f: "08/04/26", v: 24.558}, {f: "09/04/26", v: 26.824}, {f: "10/04/26", v: 29.000},
-            {f: "11/04/26", v: 29.083}, {f: "12/04/26", v: 29.069}, {f: "13/04/26", v: 29.128}, {f: "14/04/26", v: 29.664}, {f: "15/04/26", v: 32.079},
-            {f: "16/04/26", v: 34.383}, {f: "17/04/26", v: 34.311}, {f: "18/04/26", v: 34.424}
+        const labels = [];
+        const poaData = [];
+        const realData = [];
+
+        // Generamos etiquetas hasta el 31 de Junio de 2026
+        // Enero
+        for(let i=1; i<=31; i++) { labels.push(`${i < 10 ? '0'+i : i}/01/26`); }
+        // Febrero
+        for(let i=1; i<=28; i++) { labels.push(`${i < 10 ? '0'+i : i}/02/26`); }
+        // Marzo
+        for(let i=1; i<=31; i++) { labels.push(`${i < 10 ? '0'+i : i}/03/26`); }
+        // Abril
+        for(let i=1; i<=30; i++) { labels.push(`${i < 10 ? '0'+i : i}/04/26`); }
+        // Mayo
+        for(let i=1; i<=31; i++) { labels.push(`${i < 10 ? '0'+i : i}/05/26`); }
+        // Junio (Límite solicitado)
+        for(let i=1; i<=30; i++) { labels.push(`${i < 10 ? '0'+i : i}/06/26`); }
+
+        // Función para obtener valores POA
+        const getPOAValue = (index) => {
+            if (index < 31) return 36.4; // Enero
+            if (index < 59) return 36.84; // Febrero
+            if (index < 90) return 37.14; // Marzo
+            if (index < 120) return 37.5 + (index-91)*0.05; // Abril (Rampa)
+            if (index < 151) return 38.69; // Mayo
+            return 39.0 + (index-151)*0.05; // Junio
+        };
+
+        // Valores Reales hasta el 18 de Abril
+        const realValuesKey = [
+            18.046, 18.088, 18.309, 14.476, 14.512, 14.09, 14.052, 14.043, 14.514, 14.057, 14.022, 14.185, 14.612, 14.043, 0.745, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.211, 12.218, 15.546, 16.062, // Enero
+            14.534, 13.666, 15.245, 16.069, 18.088, 18.691, 19.542, 18.429, 18.513, 18.713, 19.439, 18.502, 18.562, 18.625, 18.682, 20.057, 20.079, 20.108, 20.1, 20.095, 20.116, 20.089, 20.251, 20.385, 20.992, 20.311, 20.196, 20.109, // Febrero
+            20.308, 20.735, 20.371, 20.454, 20.531, 21.569, 21.428, 21.532, 21.042, 22.502, 23.334, 23.604, 24.07, 24.022, 24.067, 24.031, 24.535, 24.466, 24.529, 24.61, 24.637, 24.615, 24.07, 24.086, 24.06, 24.275, 24.22, 24.216, 24.266, 24.527, 24.629, // Marzo
+            24.432, 24.405, 24.44, 24.73, 24.451, 24.687, 24.718, 24.558, 26.824, 29, 29.083, 29.069, 29.128, 29.664, 32.079, 34.383, 34.311, 34.424 // Abril (hasta el 18)
         ];
+
+        labels.forEach((label, index) => {
+            poaData.push(getPOAValue(index));
+            if (index < realValuesKey.length) {
+                realData.push(realValuesKey[index]);
+            } else {
+                realData.push(null); 
+            }
+        });
 
         new Chart(ctx, {
             type: 'line',
             data: {
-                labels: rawData.map(d => d.f),
-                datasets: [{
-                    label: 'Production MBD',
-                    data: rawData.map(d => d.v),
-                    borderColor: '#1d1d86',
-                    borderWidth: 2,
-                    fill: true,
-                    backgroundColor: 'rgba(29, 29, 134, 0.05)',
-                    tension: 0.3,
-                    pointRadius: rawData.map((d, i) => i === rawData.length - 1 ? 6 : 0),
-                    pointBackgroundColor: rawData.map((d, i) => i === rawData.length - 1 ? '#22c55e' : '#1d1d86'),
-                    pointHoverRadius: 5
-                }]
+                labels: labels,
+                datasets: [
+                    {
+                        label: 'REAL (MBD)',
+                        data: realData,
+                        borderColor: '#1d1d86',
+                        backgroundColor: 'rgba(29, 29, 134, 0.1)',
+                        borderWidth: 3,
+                        fill: true,
+                        tension: 0.3,
+                        pointRadius: (context) => {
+                            const index = context.dataIndex;
+                            return index === realValuesKey.length - 1 ? 6 : 0;
+                        },
+                        pointBackgroundColor: '#22c55e',
+                        zIndex: 2
+                    },
+                    {
+                        label: 'POA (MBD)',
+                        data: poaData,
+                        borderColor: '#94a3b8',
+                        borderDash: [5, 5],
+                        borderWidth: 2,
+                        fill: false,
+                        tension: 0.1,
+                        pointRadius: 0,
+                        zIndex: 1
+                    }
+                ]
             },
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
+                interaction: {
+                    intersect: false,
+                    mode: 'index',
+                },
                 plugins: {
-                    legend: { display: false }
+                    legend: { display: false },
+                    tooltip: {
+                        padding: 10,
+                        bodyFont: { size: 11, weight: 'bold' },
+                        titleFont: { size: 12 },
+                        callbacks: {
+                            label: function(context) {
+                                return context.dataset.label + ': ' + context.parsed.y.toFixed(3);
+                            }
+                        }
+                    }
                 },
                 scales: {
                     x: {
                         ticks: {
-                            maxRotation: 45,
-                            minRotation: 45,
-                            font: { size: 9 },
+                            maxRotation: 0,
+                            autoSkip: false,
+                            font: { size: 9, weight: 'bold' },
+                            color: '#64748b',
                             callback: function(val, index) {
-                                return index % 7 === 0 ? this.getLabelForValue(val) : '';
+                                const label = labels[index];
+                                if (label && label.startsWith("01/")) {
+                                    const monthNames = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN"];
+                                    const monthIndex = parseInt(label.split("/")[1]) - 1;
+                                    return monthNames[monthIndex];
+                                }
+                                return null;
                             }
                         },
-                        grid: { display: false }
+                        grid: { 
+                            display: true,
+                            color: 'rgba(0,0,0,0.03)',
+                            drawTicks: false
+                        }
                     },
                     y: {
-                        beginAtZero: true,
-                        ticks: { font: { size: 9 } }
+                        beginAtZero: false,
+                        min: 0,
+                        max: 45,
+                        ticks: { 
+                            font: { size: 10 },
+                            stepSize: 5
+                        },
+                        grid: { color: 'rgba(0,0,0,0.05)' }
                     }
                 }
             }
