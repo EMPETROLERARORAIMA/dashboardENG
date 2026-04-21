@@ -62,7 +62,7 @@
         .card-kpi {
             background: white;
             border-radius: 12px;
-            padding: 1rem;
+            padding: 0.75rem;
             border-bottom: 4px solid transparent;
             min-height: 110px;
             display: flex;
@@ -78,11 +78,17 @@
             height: 350px;
             width: 100%;
         }
+
+        .sparkline-container {
+            height: 35px;
+            width: 100%;
+            margin-top: 4px;
+        }
     </style>
 </head>
 <body class="text-slate-800">
 
-   <!-- Encabezado -->
+<!-- Encabezado -->
     <header class="bg-primary text-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-4">
             <div class="flex items-center space-x-4">
@@ -93,7 +99,7 @@
                     <h1 class="text-base md:text-lg font-bold uppercase leading-tight tracking-tight">Petrolera Roraima S.A.</h1>
                     <div class="flex items-center mt-0.5">
                         <div class="w-2 h-2 bg-green-500 rounded-full pulse-green mr-2"></div>
-                        <p class="text-[10px] text-green-400 font-medium leading-none uppercase tracking-wider">Sistema Activo | 19/04/2026</p>
+                        <p class="text-[10px] text-green-400 font-medium leading-none uppercase tracking-wider">Sistema Activo | 21/04/2026</p>
                     </div>
                 </div>
             </div>
@@ -107,27 +113,27 @@
         <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-3 mb-8">
             <div class="card-kpi card-shadow border-blue-600">
                 <p class="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase">Actual Production</p>
-                <div class="my-1"><span class="text-lg md:text-xl font-black text-gray-800">34,402</span><span class="text-[9px] text-gray-400 font-bold ml-1">MBD</span></div>
-                <p class="text-[9px] font-bold text-red-600"><i class="fas fa-caret-down"></i> -0.022 vs Prev.</p>
+                <div class="my-1"><span class="text-lg md:text-xl font-black text-gray-800">34,408</span><span class="text-[9px] text-gray-400 font-bold ml-1">MBD</span></div>
+                <p class="text-[9px] font-bold text-green-600"><i class="fas fa-caret-up"></i> +0.007 vs Prev.</p>
             </div>
             <div class="card-kpi card-shadow border-purple-600">
                 <p class="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase">Previous Day</p>
-                <div class="my-1"><span class="text-lg md:text-xl font-black text-gray-800">34,424</span><span class="text-[9px] text-gray-400 font-bold ml-1">MBD</span></div>
-                <p class="text-[9px] font-bold text-green-600 uppercase">Stable</p>
+                <div class="my-1"><span class="text-lg md:text-xl font-black text-gray-800">34,402</span><span class="text-[9px] text-gray-400 font-bold ml-1">MBD</span></div>
+                <p class="text-[9px] font-bold text-slate-400 uppercase">Reference</p>
             </div>
             <div class="card-kpi card-shadow border-blue-900">
                 <p class="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase">Monthly Average</p>
-                <div class="my-1"><span class="text-lg md:text-xl font-black text-gray-800">28,357</span><span class="text-[9px] text-gray-400 font-bold ml-1">MBD</span></div>
-                <p class="text-[9px] font-bold text-blue-600"><i class="fas fa-chart-line"></i> vs 23,205 March</p>
+                <div class="my-1"><span class="text-lg md:text-xl font-black text-gray-800">28,660</span><span class="text-[9px] text-gray-400 font-bold ml-1">MBD</span></div>
+                <p class="text-[9px] font-bold text-blue-600"><i class="fas fa-chart-line"></i> 1.66 %BS&W</p>
             </div>
             <div class="card-kpi card-shadow border-green-600">
                 <p class="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase">Avail. Prod. Cat 1</p>
-                <div class="my-1"><span class="text-lg md:text-xl font-black text-green-700">37,619</span><span class="text-[9px] text-gray-400 font-bold ml-1">MBD</span></div>
+                <div class="my-1"><span class="text-lg md:text-xl font-black text-green-700">37,870</span><span class="text-[9px] text-gray-400 font-bold ml-1">MBD</span></div>
                 <p class="text-[9px] font-bold text-gray-400 uppercase italic">Capacity</p>
             </div>
             <div class="card-kpi card-shadow border-slate-400">
                 <p class="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase">POA Target</p>
-                <div class="my-1"><span class="text-lg md:text-xl font-black text-gray-800">38.15</span><span class="text-[9px] text-gray-400 font-bold ml-1">MBD</span></div>
+                <div class="my-1"><span class="text-lg md:text-xl font-black text-gray-800">38.19</span><span class="text-[9px] text-gray-400 font-bold ml-1">MBD</span></div>
                 <p class="text-[9px] font-bold text-gray-400 uppercase">90.1% Compliance</p>
             </div>
             <div class="card-kpi card-shadow border-teal-500">
@@ -135,10 +141,14 @@
                 <div class="my-1 text-teal-700"><span class="text-lg md:text-xl font-black">41</span><span class="text-[9px] font-bold ml-1 uppercase">Running</span></div>
                 <p class="text-[9px] font-bold text-teal-600 uppercase">Total 64</p>
             </div>
+            <!-- UPDATED CARD: Weekly Commitment with Projection Sparkline -->
             <div class="card-kpi card-shadow border-orange-500">
                 <p class="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase">Weekly Commitment</p>
-                <div class="my-1"><span class="text-lg md:text-xl font-black text-gray-800">29.00</span><span class="text-[9px] text-gray-400 font-bold ml-1">MBD</span></div>
-                <p class="text-[9px] font-bold text-orange-600 uppercase">+5,401 Variance</p>
+                <div class="mt-1 leading-none"><span class="text-lg md:text-xl font-black text-gray-800">34.30</span><span class="text-[9px] text-gray-400 font-bold ml-1">MBD</span></div>
+                <div class="sparkline-container">
+                    <canvas id="weeklySparkline"></canvas>
+                </div>
+                <p class="text-[8px] font-bold text-orange-600 uppercase mt-1">Projection: 20-26 APR</p>
             </div>
         </div>
 
@@ -181,9 +191,9 @@
                         <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Cluster / Well</p><p class="font-black">PQ20 / PQ20-04</p></div>
                         <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Job Type</p><p class="font-black">RSB (Rod Pump)</p></div>
                         <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Plan/Real Day</p><p class="font-black text-primary">1 / 0.46</p></div>
-                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">NPT (Hrs)</p><p class="font-black text-red-600">23.0</p></div>
+                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">NPT (Hrs)</p><p class="font-black text-red-600">59.0</p></div>
                     </div>
-                    <div class="bg-green-50 rounded-lg p-2 border border-green-100"><p class="text-[10px] font-bold text-green-900 italic">Unit on standby for well assignment (PQ20-04 Completed).</p></div>
+                    <div class="bg-green-50 rounded-lg p-2 border border-green-100"><p class="text-[10px] font-bold text-green-900 italic">Job completed at PQ20-04 (440 Bbls/D). Unit on standby for next assignment.</p></div>
                 </div>
             </div>
 
@@ -198,9 +208,9 @@
                         <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Cluster / Well</p><p class="font-black">IJ27 / 66X</p></div>
                         <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Job Type</p><p class="font-black">RBCP (Change Pump)</p></div>
                         <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Plan/Real Day</p><p class="font-black">3.5 / 0.1</p></div>
-                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">NPT (Hrs)</p><p class="font-black text-red-600">176.5</p></div>
+                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">NPT (Hrs)</p><p class="font-black text-red-600">212.5</p></div>
                     </div>
-                    <div class="bg-red-50 rounded-lg p-2 border border-red-100"><p class="text-[10px] font-bold text-red-900 italic">Rig moved to IJ27. Critical structural damage assessment ongoing.</p></div>
+                    <div class="bg-red-50 rounded-lg p-2 border border-red-100"><p class="text-[10px] font-bold text-red-900 italic">Moved to Cluster IJ27. Critical structural system failure assessment.</p></div>
                 </div>
             </div>
 
@@ -215,14 +225,62 @@
                         <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Cluster / Well</p><p class="font-black">IJ27 / No Well</p></div>
                         <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Job Type</p><p class="font-black">Rig Move</p></div>
                         <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Plan Day</p><p class="font-black">3.5</p></div>
-                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">NPT (Hrs)</p><p class="font-black text-red-600">136.0</p></div>
+                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">NPT (Hrs)</p><p class="font-black text-red-600">172.0</p></div>
                     </div>
-                    <div class="bg-amber-50 rounded-lg p-2 border border-amber-100"><p class="text-[10px] font-bold text-amber-900 italic">Rig Secured / Awaiting movement clearance.</p></div>
+                    <div class="bg-amber-50 rounded-lg p-2 border border-amber-100"><p class="text-[10px] font-bold text-amber-900 italic">Rig in custody. Awaiting Rig Move clearance.</p></div>
                 </div>
             </div>
         </div>
 
-        <!-- Detailed Analysis -->
+        <!-- Well Status Analysis -->
+        <h2 class="text-xs md:text-sm font-black text-primary mb-5 uppercase tracking-widest flex items-center px-1">
+            <i class="fas fa-microscope mr-2 text-accent"></i> Well Category & Potential Status
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+            <div class="bg-white p-4 rounded-xl shadow-md border-l-4 border-blue-600">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <p class="text-[10px] font-bold text-slate-500 uppercase">Category 1 Wells</p>
+                        <h4 class="text-2xl font-black text-blue-900">262</h4>
+                    </div>
+                    <span class="bg-blue-100 text-blue-700 text-[9px] font-black px-2 py-1 rounded">ACTIVE</span>
+                </div>
+                <div class="mt-3 pt-3 border-t border-slate-50">
+                    <p class="text-[9px] font-bold text-slate-400 uppercase">Available Potential</p>
+                    <p class="text-lg font-black text-blue-600">37.87 <span class="text-[10px]">MBD</span></p>
+                </div>
+            </div>
+            
+            <div class="bg-white p-4 rounded-xl shadow-md border-l-4 border-orange-600">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <p class="text-[10px] font-bold text-slate-500 uppercase">Category 2 Wells</p>
+                        <h4 class="text-2xl font-black text-orange-900">176</h4>
+                    </div>
+                    <span class="bg-orange-100 text-orange-700 text-[9px] font-black px-2 py-1 rounded">RESTRICTED</span>
+                </div>
+                <div class="mt-3 pt-3 border-t border-slate-50">
+                    <p class="text-[9px] font-bold text-slate-400 uppercase">Available Potential</p>
+                    <p class="text-lg font-black text-orange-600">14.96 <span class="text-[10px]">MBD</span></p>
+                </div>
+            </div>
+
+            <div class="bg-white p-4 rounded-xl shadow-md border-l-4 border-slate-400">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <p class="text-[10px] font-bold text-slate-500 uppercase">Category 3 Wells</p>
+                        <h4 class="text-2xl font-black text-slate-900">115</h4>
+                    </div>
+                    <span class="bg-slate-100 text-slate-700 text-[9px] font-black px-2 py-1 rounded">SHUT-IN</span>
+                </div>
+                <div class="mt-3 pt-3 border-t border-slate-50">
+                    <p class="text-[9px] font-bold text-slate-400 uppercase">Status & Forecast</p>
+                    <p class="text-[10px] font-black text-slate-600 italic leading-tight">Under evaluation for RA/RC workovers. Zero current potential.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Detailed Analysis (Diluent & Variance) -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
             
             <!-- Diluent Management -->
@@ -233,19 +291,19 @@
                 <div class="grid grid-cols-2 gap-4">
                     <div class="p-3 bg-blue-50 rounded-xl">
                         <p class="text-[9px] font-bold text-blue-800 uppercase">Injection (MBD)</p>
-                        <p class="text-2xl font-black text-primary">9,783</p>
+                        <p class="text-2xl font-black text-primary">10,390</p>
                     </div>
                     <div class="p-3 bg-blue-50 rounded-xl">
                         <p class="text-[9px] font-bold text-blue-800 uppercase">Inventory (MBLS)</p>
-                        <p class="text-2xl font-black text-primary">37,722</p>
+                        <p class="text-2xl font-black text-primary">38,935</p>
                     </div>
                     <div class="p-3 bg-slate-50 rounded-xl">
                         <p class="text-[9px] font-bold text-slate-500 uppercase">Received (MBD)</p>
-                        <p class="text-lg font-bold">9,978</p>
+                        <p class="text-lg font-bold">11,955</p>
                     </div>
                     <div class="p-3 bg-slate-50 rounded-xl">
                         <p class="text-[9px] font-bold text-slate-500 uppercase">Autonomy (Hrs)</p>
-                        <p class="text-lg font-bold text-orange-600">92.54</p>
+                        <p class="text-lg font-bold text-orange-600">89.84</p>
                     </div>
                 </div>
             </div>
@@ -257,7 +315,7 @@
                         <i class="fas fa-chart-pie mr-2 text-accent"></i> Variance vs Total Potential
                     </h3>
                     <div class="text-right">
-                        <span class="bg-accent text-primary px-3 py-1 rounded-full font-black text-xs">-30,034 MBD</span>
+                        <span class="bg-accent text-primary px-3 py-1 rounded-full font-black text-xs">-30,027 MBD</span>
                     </div>
                 </div>
                 
@@ -284,22 +342,22 @@
                             <tr class="explanation-row">
                                 <td class="p-3 font-bold text-primary italic">3. RESERVOIRS</td>
                                 <td class="p-3 text-red-600 font-bold text-center">-0,845</td>
-                                <td class="p-3 text-slate-600">07 Wells. 02 Low submergence (-0.323), 05 High GOR (-0.522).</td>
+                                <td class="p-3 text-slate-600">07 Wells. Low submergence (-0.323), High GOR (-0.522).</td>
                             </tr>
                             <tr class="explanation-row">
                                 <td class="p-3 font-bold text-primary italic">4. OPERATIONS</td>
-                                <td class="p-3 text-red-600 font-bold text-center">-11,108</td>
-                                <td class="p-3 text-slate-600">Potential Uncertainty (-6.158), VO adjustments (-5.351).</td>
+                                <td class="p-3 text-red-600 font-bold text-center">-11,541</td>
+                                <td class="p-3 text-slate-600">Potential Uncertainty (-7.577), VO adjustments 58 wells (-4.072).</td>
                             </tr>
                             <tr class="explanation-row">
                                 <td class="p-3 font-bold text-primary italic">5. OPTIMIZATION</td>
-                                <td class="p-3 text-red-600 font-bold text-center">-0,479</td>
-                                <td class="p-3 text-slate-600">H902, DF1408 ramping up. PQ2004 active after stuffing box fix.</td>
+                                <td class="p-3 text-red-600 font-bold text-center">-0,039</td>
+                                <td class="p-3 text-slate-600">H902, DF1408 ramping up post-workover. (+0.108 field optimization).</td>
                             </tr>
                             <tr class="explanation-row">
                                 <td class="p-3 font-bold text-primary italic">6. MAINT. OPS</td>
                                 <td class="p-3 text-red-600 font-bold text-center">-0,464</td>
-                                <td class="p-3 text-slate-600">Electric motor Q2704 (-0.400). VFD replacement FG1913 (-0.064).</td>
+                                <td class="p-3 text-slate-600">Q2704 motor replace (-0.400). FG1913 VFD repair (-0.064).</td>
                             </tr>
                         </tbody>
                     </table>
@@ -316,20 +374,17 @@
     </footer>
 
     <script>
+        // --- MAIN PRODUCTION CHART ---
         const ctx = document.getElementById('productionChart').getContext('2d');
-        
         const labels = [];
         const poaData = [];
         const realData = [];
-
-        // Dates through June 30, 2026
         for(let i=1; i<=31; i++) { labels.push(`${i < 10 ? '0'+i : i}/01/26`); }
         for(let i=1; i<=28; i++) { labels.push(`${i < 10 ? '0'+i : i}/02/26`); }
         for(let i=1; i<=31; i++) { labels.push(`${i < 10 ? '0'+i : i}/03/26`); }
         for(let i=1; i<=30; i++) { labels.push(`${i < 10 ? '0'+i : i}/04/26`); }
         for(let i=1; i<=31; i++) { labels.push(`${i < 10 ? '0'+i : i}/05/26`); }
         for(let i=1; i<=30; i++) { labels.push(`${i < 10 ? '0'+i : i}/06/26`); }
-
         const getPOAValue = (index) => {
             if (index < 31) return 36.4; 
             if (index < 59) return 36.84; 
@@ -338,109 +393,70 @@
             if (index < 151) return 38.69; 
             return 39.0 + (index-151)*0.05; 
         };
-
-        // Real Values including April 19 (34.402)
         const realValuesKey = [
             18.046, 18.088, 18.309, 14.476, 14.512, 14.09, 14.052, 14.043, 14.514, 14.057, 14.022, 14.185, 14.612, 14.043, 0.745, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.211, 12.218, 15.546, 16.062, 
             14.534, 13.666, 15.245, 16.069, 18.088, 18.691, 19.542, 18.429, 18.513, 18.713, 19.439, 18.502, 18.562, 18.625, 18.682, 20.057, 20.079, 20.108, 20.1, 20.095, 20.116, 20.089, 20.251, 20.385, 20.992, 20.311, 20.196, 20.109, 
             20.308, 20.735, 20.371, 20.454, 20.531, 21.569, 21.428, 21.532, 21.042, 22.502, 23.334, 23.604, 24.07, 24.022, 24.067, 24.031, 24.535, 24.466, 24.529, 24.61, 24.637, 24.615, 24.07, 24.086, 24.06, 24.275, 24.22, 24.216, 24.266, 24.527, 24.629, 
-            24.432, 24.405, 24.44, 24.73, 24.451, 24.687, 24.718, 24.558, 26.824, 29, 29.083, 29.069, 29.128, 29.664, 32.079, 34.383, 34.311, 34.424, 34.402
+            24.432, 24.405, 24.44, 24.73, 24.451, 24.687, 24.718, 24.558, 26.824, 29, 29.083, 29.069, 29.128, 29.664, 32.079, 34.383, 34.311, 34.424, 34.402, 34.408
         ];
-
         labels.forEach((label, index) => {
             poaData.push(getPOAValue(index));
-            if (index < realValuesKey.length) {
-                realData.push(realValuesKey[index]);
-            } else {
-                realData.push(null); 
-            }
+            if (index < realValuesKey.length) { realData.push(realValuesKey[index]); } else { realData.push(null); }
         });
-
         new Chart(ctx, {
             type: 'line',
             data: {
                 labels: labels,
                 datasets: [
+                    { label: 'REAL (MBD)', data: realData, borderColor: '#1d1d86', backgroundColor: 'rgba(29, 29, 134, 0.1)', borderWidth: 3, fill: true, tension: 0.3, pointRadius: (context) => context.dataIndex === realValuesKey.length - 1 ? 6 : 0, pointBackgroundColor: '#22c55e', zIndex: 2 },
+                    { label: 'POA (MBD)', data: poaData, borderColor: '#94a3b8', borderDash: [5, 5], borderWidth: 2, fill: false, tension: 0.1, pointRadius: 0, zIndex: 1 }
+                ]
+            },
+            options: { responsive: true, maintainAspectRatio: false, interaction: { intersect: false, mode: 'index' }, plugins: { legend: { display: false }, tooltip: { padding: 10, bodyFont: { size: 11, weight: 'bold' }, titleFont: { size: 12 }, callbacks: { label: function(context) { return context.dataset.label + ': ' + context.parsed.y.toFixed(3); } } } }, scales: { x: { ticks: { maxRotation: 0, autoSkip: false, font: { size: 9, weight: 'bold' }, color: '#64748b', callback: function(val, index) { const label = labels[index]; if (label && label.startsWith("01/")) { const monthNames = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN"]; const monthIndex = parseInt(label.split("/")[1]) - 1; return monthNames[monthIndex]; } return null; } }, grid: { display: true, color: 'rgba(0,0,0,0.03)', drawTicks: false } }, y: { beginAtZero: false, min: 0, max: 45, ticks: { font: { size: 10 }, stepSize: 5 }, grid: { color: 'rgba(0,0,0,0.05)' } } } }
+        });
+
+        // --- WEEKLY SPARKLINE (20-26 APR) ---
+        const sparkCtx = document.getElementById('weeklySparkline').getContext('2d');
+        const sparkPlan = [34.3, 34.5, 34.7, 34.9, 35.0, 35.1, 35.2];
+        const sparkReal = [34.408, null, null, null, null, null, null];
+        
+        new Chart(sparkCtx, {
+            type: 'line',
+            data: {
+                labels: ['20', '21', '22', '23', '24', '25', '26'],
+                datasets: [
                     {
-                        label: 'REAL (MBD)',
-                        data: realData,
-                        borderColor: '#1d1d86',
-                        backgroundColor: 'rgba(29, 29, 134, 0.1)',
-                        borderWidth: 3,
-                        fill: true,
-                        tension: 0.3,
-                        pointRadius: (context) => {
-                            const index = context.dataIndex;
-                            return index === realValuesKey.length - 1 ? 6 : 0;
-                        },
+                        label: 'REAL',
+                        data: sparkReal,
+                        borderColor: '#22c55e',
+                        borderWidth: 2,
+                        pointRadius: 4,
                         pointBackgroundColor: '#22c55e',
-                        zIndex: 2
+                        fill: false,
+                        tension: 0
                     },
                     {
-                        label: 'POA (MBD)',
-                        data: poaData,
+                        label: 'PLAN',
+                        data: sparkPlan,
                         borderColor: '#94a3b8',
-                        borderDash: [5, 5],
-                        borderWidth: 2,
-                        fill: false,
-                        tension: 0.1,
+                        borderWidth: 1.5,
+                        borderDash: [2, 2],
                         pointRadius: 0,
-                        zIndex: 1
+                        fill: false,
+                        tension: 0.1
                     }
                 ]
             },
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
-                interaction: {
-                    intersect: false,
-                    mode: 'index',
-                },
-                plugins: {
-                    legend: { display: false },
-                    tooltip: {
-                        padding: 10,
-                        bodyFont: { size: 11, weight: 'bold' },
-                        titleFont: { size: 12 },
-                        callbacks: {
-                            label: function(context) {
-                                return context.dataset.label + ': ' + context.parsed.y.toFixed(3);
-                            }
-                        }
-                    }
-                },
+                plugins: { legend: { display: false }, tooltip: { enabled: true, bodyFont: { size: 9 } } },
                 scales: {
-                    x: {
-                        ticks: {
-                            maxRotation: 0,
-                            autoSkip: false,
-                            font: { size: 9, weight: 'bold' },
-                            color: '#64748b',
-                            callback: function(val, index) {
-                                const label = labels[index];
-                                if (label && label.startsWith("01/")) {
-                                    const monthNames = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN"];
-                                    const monthIndex = parseInt(label.split("/")[1]) - 1;
-                                    return monthNames[monthIndex];
-                                }
-                                return null;
-                            }
-                        },
-                        grid: { 
-                            display: true,
-                            color: 'rgba(0,0,0,0.03)',
-                            drawTicks: false
-                        }
-                    },
-                    y: {
-                        beginAtZero: false,
-                        min: 0,
-                        max: 45,
-                        ticks: { 
-                            font: { size: 10 },
-                            stepSize: 5
-                        },
-                        grid: { color: 'rgba(0,0,0,0.05)' }
+                    x: { display: false },
+                    y: { 
+                        display: false,
+                        min: 34.0,
+                        max: 35.5
                     }
                 }
             }
