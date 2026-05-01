@@ -84,61 +84,9 @@
             width: 100%;
             margin-top: 4px;
         }
-
-        #login-overlay {
-            position: fixed;
-            inset: 0;
-            background: #0f172a;
-            z-index: 9999;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 1rem;
-        }
-        
-        #main-content {
-            display: none;
-        }
     </style>
 </head>
 <body class="text-slate-800">
-
-    <!-- Access Control Overlay -->
-    <div id="login-overlay">
-        <div class="bg-white w-full max-w-md rounded-2xl shadow-2xl overflow-hidden">
-            <div class="bg-primary p-6 text-center">
-                <img src="https://i.postimg.cc/XvDdbVN3/logo2.png" alt="A&B Logo" class="mx-auto mb-4 h-12 object-contain bg-white rounded-md p-1">
-                <h2 class="text-white font-bold uppercase tracking-widest text-sm">Secure Operations Portal</h2>
-            </div>
-            <div class="p-8">
-                <p class="text-slate-600 text-sm text-center mb-6 leading-relaxed">
-                    This dashboard is designed for authorized users of 
-                    <span class="font-bold text-primary">A&B Oil and Gas</span> and 
-                    <span class="font-bold text-primary">Fluxus</span>.
-                    <br><br>
-                    Please enter your password to continue.
-                </p>
-                <form id="access-form" class="space-y-4">
-                    <div class="relative">
-                        <i class="fas fa-lock absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"></i>
-                        <input type="password" id="password-input" 
-                               class="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all text-sm"
-                               placeholder="Password" required>
-                    </div>
-                    <button type="submit" 
-                            class="w-full bg-primary hover:bg-blue-900 text-white font-bold py-3 rounded-xl transition-all shadow-lg active:scale-95 text-sm uppercase tracking-wider">
-                        Access Dashboard
-                    </button>
-                    <p id="error-msg" class="text-red-500 text-[10px] font-bold text-center uppercase hidden">
-                        <i class="fas fa-times-circle mr-1"></i> Incorrect Password. Please try again.
-                    </p>
-                </form>
-            </div>
-            <div class="bg-slate-50 p-4 border-t border-slate-100 text-center">
-                <p class="text-[9px] text-slate-400 font-bold uppercase tracking-tighter">Strategic Planning | Petrolera Roraima S.A. | Confidential Information</p>
-            </div>
-        </div>
-    </div>
 
     <!-- Main Dashboard Content -->
     <div id="main-content">
@@ -157,9 +105,6 @@
                         </div>
                     </div>
                 </div>
-                <button id="logout-btn" class="bg-blue-900/50 hover:bg-red-900/50 px-3 py-1.5 rounded-lg text-[10px] font-bold uppercase border border-white/20 transition-all">
-                    <i class="fas fa-sign-out-alt mr-1"></i> Logout
-                </button>
             </div>
         </header>
 
@@ -578,41 +523,7 @@
     </div>
 
     <script>
-        // --- ACCESS CONTROL ---
-        const loginOverlay = document.getElementById('login-overlay');
-        const mainContent = document.getElementById('main-content');
-        const accessForm = document.getElementById('access-form');
-        const passwordInput = document.getElementById('password-input');
-        const errorMsg = document.getElementById('error-msg');
-        const logoutBtn = document.getElementById('logout-btn');
-        
-        const CORRECT_PASSWORD = "KpisPR";
-
-        if (sessionStorage.getItem('authenticated') === 'true') {
-            showDashboard();
-        }
-
-        accessForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            if (passwordInput.value === CORRECT_PASSWORD) {
-                sessionStorage.setItem('authenticated', 'true');
-                showDashboard();
-            } else {
-                errorMsg.classList.remove('hidden');
-                passwordInput.classList.add('border-red-500');
-                passwordInput.value = '';
-                passwordInput.focus();
-            }
-        });
-
-        logoutBtn.addEventListener('click', () => {
-            sessionStorage.removeItem('authenticated');
-            location.reload();
-        });
-
-        function showDashboard() {
-            loginOverlay.style.display = 'none';
-            mainContent.style.display = 'block';
+        window.onload = function() {
             initCharts();
         }
 
