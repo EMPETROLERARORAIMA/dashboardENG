@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A&B Oil and Gas | Petrolera Roraima Operations</title>
+    <title>A&B Oil and Gas | Roraima Oil Operations</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -46,7 +46,7 @@
         }
 
         @keyframes pulse {
-            0 { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
             70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(34, 197, 94, 0); }
             100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
         }
@@ -97,7 +97,7 @@
                         <img src="https://i.postimg.cc/XvDdbVN3/logo2.png" alt="A&B Oil and Gas Logo" class="banner-logo">
                     </div>
                     <div class="border-l border-slate-600 pl-4 header-info">
-                        <h1 class="text-base md:text-lg font-bold uppercase leading-tight tracking-tight">Petrolera Roraima S.A.</h1>
+                        <h1 class="text-base md:text-lg font-bold uppercase leading-tight tracking-tight">Roraima Oil S.A.</h1>
                         <div class="flex items-center mt-0.5">
                             <div class="w-2 h-2 bg-green-500 rounded-full pulse-green mr-2"></div>
                             <p class="text-[10px] text-green-400 font-medium leading-none uppercase tracking-wider">Active System | <span id="current-date">Loading...</span></p>
@@ -113,33 +113,33 @@
         <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3 mb-8">
             <div class="card-kpi card-shadow border-blue-600">
                 <p class="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase">Current Production</p>
-                <div class="my-1"><span class="text-lg md:text-xl font-black text-gray-800">37,035</span><span class="text-[9px] text-gray-400 font-bold ml-1">MBPD</span></div>
-                <p class="text-[9px] font-bold text-green-600"><i class="fas fa-caret-up"></i> +0.013 vs Prev.</p>
+                <div class="my-1"><span class="text-lg md:text-xl font-black text-gray-800">37,069</span><span class="text-[9px] text-gray-400 font-bold ml-1">MBD</span></div>
+                <p class="text-[9px] font-bold text-green-600"><i class="fas fa-caret-up"></i> +0.034 vs Prev.</p>
             </div>
             <div class="card-kpi card-shadow border-purple-600">
                 <p class="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase">Previous Day</p>
-                <div class="my-1"><span class="text-lg md:text-xl font-black text-gray-800">37,022</span><span class="text-[9px] text-gray-400 font-bold ml-1">MBPD</span></div>
+                <div class="my-1"><span class="text-lg md:text-xl font-black text-gray-800">37,035</span><span class="text-[9px] text-gray-400 font-bold ml-1">MBD</span></div>
                 <p class="text-[9px] font-bold text-slate-400 uppercase">Reference</p>
             </div>
             <div class="card-kpi card-shadow border-blue-900">
                 <p class="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase">Month Average</p>
-                <div class="my-1"><span class="text-lg md:text-xl font-black text-gray-800">36,870</span><span class="text-[9px] text-gray-400 font-bold ml-1">MBPD</span></div>
-                <p class="text-[8px] font-bold text-blue-600 uppercase leading-tight">Prev Month: 31,099 MBPD</p>
+                <div class="my-1"><span class="text-lg md:text-xl font-black text-gray-800">36,887</span><span class="text-[9px] text-gray-400 font-bold ml-1">MBD</span></div>
+                <p class="text-[8px] font-bold text-blue-600 uppercase leading-tight">Prev Month: 31,099 MBD</p>
             </div>
             <div class="card-kpi card-shadow border-cyan-600">
                 <p class="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase">% BS&W</p>
-                <div class="my-1"><span class="text-lg md:text-xl font-black text-gray-800">1.418</span><span class="text-[9px] text-gray-400 font-bold ml-1">%</span></div>
+                <div class="my-1"><span class="text-lg md:text-xl font-black text-gray-800">1.368</span><span class="text-[9px] text-gray-400 font-bold ml-1">%</span></div>
                 <p class="text-[9px] font-bold text-green-600 uppercase">Decrease</p>
             </div>
             <div class="card-kpi card-shadow border-green-600">
                 <p class="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase">Cat 1 Potential</p>
-                <div class="my-1"><span class="text-lg md:text-xl font-black text-green-700">37,866</span><span class="text-[9px] text-gray-400 font-bold ml-1">MBPD</span></div>
+                <div class="my-1"><span class="text-lg md:text-xl font-black text-green-700">38,210</span><span class="text-[9px] text-gray-400 font-bold ml-1">MBD</span></div>
                 <p class="text-[9px] font-bold text-gray-400 uppercase italic">Capacity</p>
             </div>
             <div class="card-kpi card-shadow border-slate-400">
-                <p class="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase">POA Commitment</p>
-                <div class="my-1"><span class="text-lg md:text-xl font-black text-gray-800">38,695</span><span class="text-[9px] text-gray-400 font-bold ml-1">MBPD</span></div>
-                <p class="text-[9px] font-bold text-red-600 uppercase"><i class="fas fa-caret-down"></i> -1.660 vs Real</p>
+                <p class="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase">AOP Commitment</p>
+                <div class="my-1"><span class="text-lg md:text-xl font-black text-gray-800">38,695</span><span class="text-[9px] text-gray-400 font-bold ml-1">MBD</span></div>
+                <p class="text-[9px] font-bold text-red-600 uppercase"><i class="fas fa-caret-down"></i> -1,626 vs Actual</p>
             </div>
             <div class="card-kpi card-shadow border-teal-500">
                 <p class="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase">Active Clusters</p>
@@ -147,12 +147,12 @@
                 <p class="text-[9px] font-bold text-teal-600 uppercase">Total 63</p>
             </div>
             <div class="card-kpi card-shadow border-orange-500">
-                <p class="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase">Weekly Commitment</p>
-                <div class="mt-1 leading-none"><span class="text-lg md:text-xl font-black text-gray-800">37.0</span><span class="text-[9px] text-gray-400 font-bold ml-1">MBPD</span></div>
+                <p class="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase">Daily Commitment</p>
+                <div class="mt-1 leading-none"><span class="text-base md:text-lg font-black text-gray-800">37,100</span><span class="text-[9px] text-gray-400 font-bold ml-1">Mbls</span></div>
                 <div class="sparkline-container">
                     <canvas id="weeklySparkline"></canvas>
                 </div>
-                <p class="text-[8px] font-bold text-orange-600 uppercase mt-1">Weekly Plan: 37.0</p>
+                <p class="text-[8px] font-bold text-orange-600 uppercase mt-1">Diff vs Proj: -0.031</p>
             </div>
         </div>
 
@@ -160,12 +160,12 @@
         <div class="bg-white p-4 md:p-6 rounded-xl shadow-md border border-slate-200 mb-10">
             <div class="flex flex-col md:flex-row md:items-center justify-between mb-6 gap-2">
                 <h2 class="text-xs md:text-sm font-black text-primary uppercase tracking-widest flex items-center">
-                    <i class="fas fa-chart-line mr-2 text-accent"></i> REAL Production vs PLAN - (MBPD)
+                    <i class="fas fa-chart-line mr-2 text-accent"></i> ACTUAL vs PLAN Production - (MBD)
                 </h2>
                 <div class="flex gap-4">
                     <div class="flex items-center gap-2">
                         <span class="w-3 h-3 bg-primary rounded-full"></span>
-                        <span class="text-[10px] font-bold text-slate-500 uppercase">Real</span>
+                        <span class="text-[10px] font-bold text-slate-500 uppercase">Actual</span>
                     </div>
                     <div class="flex items-center gap-2">
                         <span class="w-3 h-3 bg-red-600 rounded-full"></span>
@@ -180,7 +180,7 @@
 
         <!-- Service Units Status -->
         <h2 class="text-xs md:text-sm font-black text-primary mb-5 uppercase tracking-widest flex items-center px-1">
-            <i class="fas fa-hard-hat mr-2 text-accent"></i> Operational Status of Service Units
+            <i class="fas fa-hard-hat mr-2 text-accent"></i> Service Units Operational Status
         </h2>
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
@@ -192,12 +192,12 @@
                 </div>
                 <div class="p-4">
                     <div class="grid grid-cols-2 gap-y-3 gap-x-2 text-[11px] mb-4">
-                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Cluster / Well</p><p class="font-black">LM23 / LM23-08</p></div>
-                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Operation</p><p class="font-black">PCS</p></div>
+                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Cluster / Well</p><p class="font-black">LM23 / LM23-06</p></div>
+                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Activity</p><p class="font-black">PCS</p></div>
                         <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Wells YTD</p><p class="font-black text-primary">50</p></div>
                         <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">NPT (Hrs)</p><p class="font-black text-red-600">10</p></div>
                     </div>
-                    <div class="bg-blue-50 rounded-lg p-2 border border-blue-100"><p class="text-[10px] font-bold text-blue-900 italic leading-tight">Summary: Well under intervention. Bleeding off well pressures to vent tank. Waiting for new well assignment, NPT 57 Hrs.</p></div>
+                    <div class="bg-blue-50 rounded-lg p-2 border border-blue-100"><p class="text-[10px] font-bold text-blue-900 italic leading-tight">Summary: Waiting for new well assignment, NPT 28 Hrs.</p></div>
                 </div>
             </div>
 
@@ -210,11 +210,11 @@
                 <div class="p-4">
                     <div class="grid grid-cols-2 gap-y-3 gap-x-2 text-[11px] mb-4">
                         <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Cluster / Well</p><p class="font-black">RS19 / RS19-08</p></div>
-                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Operation</p><p class="font-black">RBCP</p></div>
+                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Activity</p><p class="font-black">RBCP</p></div>
                         <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Wells YTD</p><p class="font-black text-primary">11</p></div>
                         <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">NPT (Hrs)</p><p class="font-black text-green-600">0</p></div>
                     </div>
-                    <div class="bg-blue-50 rounded-lg p-2 border border-blue-100"><p class="text-[10px] font-bold text-blue-900 italic leading-tight">Summary: Rigged Up 100%, checked TBG 150 PSI - CSG 150 PSI pressures, bled off pressures to flare tank, pumped 160 Bbls of ASC, well controlled ok, ND stuffing box + BP. Current: ND integral BOP, 80%.</p></div>
+                    <div class="bg-blue-50 rounded-lg p-2 border border-blue-100"><p class="text-[10px] font-bold text-blue-900 italic leading-tight">Summary: SFH 2916 Ft of TBG String 5.5 In LTC + Production BHA, disassembled BHA, calibrated, measured, and assembled new BHA. Current: RIH production BHA + 1920 Ft of TBG string 5.5 In LTC, 1x1 from racks.</p></div>
                 </div>
             </div>
 
@@ -227,11 +227,11 @@
                 <div class="p-4">
                     <div class="grid grid-cols-2 gap-y-3 gap-x-2 text-[11px] mb-4">
                         <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Cluster / Well</p><p class="font-black">LM23 / LM23-06</p></div>
-                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Operation</p><p class="font-black">RBCP</p></div>
+                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Activity</p><p class="font-black">RBCP</p></div>
                         <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Wells YTD</p><p class="font-black text-primary">7</p></div>
                         <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">NPT (Hrs)</p><p class="font-black text-green-600">0</p></div>
                     </div>
-                    <div class="bg-blue-50 rounded-lg p-2 border border-blue-100"><p class="text-[10px] font-bold text-blue-900 italic leading-tight">Summary: Closed operations on well JK22-04 at 1100 Hrs with 1.48 real days, well ready for production, executed rig release 100%, hooked up and moved rig 100%. Current: Positioning rig, 60%.</p></div>
+                    <div class="bg-blue-50 rounded-lg p-2 border border-blue-100"><p class="text-[10px] font-bold text-blue-900 italic leading-tight">Summary: SFH 316 Ft of Rod String 1 In x 25 Ft x Pin 1 In, disassembled rod power tongs, ND R-BOP + Flow T, NU spherical BOP tested at 1500 PSI. Current: SFH 820 Ft of TBG String 5.5 In LTC + sensor cable, 1x1 to racks.</p></div>
                 </div>
             </div>
         </div>
@@ -245,13 +245,13 @@
                 <div class="flex justify-between items-start">
                     <div>
                         <p class="text-[10px] font-bold text-slate-500 uppercase">Category 1 Wells</p>
-                        <h4 class="text-2xl font-black text-blue-900">262</h4>
+                        <h4 class="text-2xl font-black text-blue-900">264</h4>
                     </div>
                     <span class="bg-blue-100 text-blue-700 text-[9px] font-black px-2 py-1 rounded">ACTIVE</span>
                 </div>
                 <div class="mt-3 pt-3 border-t border-slate-50">
                     <p class="text-[9px] font-bold text-slate-400 uppercase">Available Potential</p>
-                    <p class="text-lg font-black text-blue-600">37,866 <span class="text-[10px]">MBPD</span></p>
+                    <p class="text-lg font-black text-blue-600">38,210 <span class="text-[10px]">MBD</span></p>
                 </div>
             </div>
             
@@ -259,13 +259,13 @@
                 <div class="flex justify-between items-start">
                     <div>
                         <p class="text-[10px] font-bold text-slate-500 uppercase">Category 2 Wells</p>
-                        <h4 class="text-2xl font-black text-orange-900">175</h4>
+                        <h4 class="text-2xl font-black text-orange-900">173</h4>
                     </div>
                     <span class="bg-orange-100 text-orange-700 text-[9px] font-black px-2 py-1 rounded">RESTRICTED</span>
                 </div>
                 <div class="mt-3 pt-3 border-t border-slate-50">
                     <p class="text-[9px] font-bold text-slate-400 uppercase">Available Potential</p>
-                    <p class="text-lg font-black text-orange-600">14,551 <span class="text-[10px]">MBPD</span></p>
+                    <p class="text-lg font-black text-orange-600">14,207 <span class="text-[10px]">MBD</span></p>
                 </div>
             </div>
 
@@ -279,7 +279,7 @@
                 </div>
                 <div class="mt-3 pt-3 border-t border-slate-50">
                     <p class="text-[9px] font-bold text-slate-400 uppercase">Status and Projection</p>
-                    <p class="text-[10px] font-black text-slate-600 italic leading-tight">Technical evaluation for major workovers (WO/RC). Increase due to poor wells.</p>
+                    <p class="text-[10px] font-black text-slate-600 italic leading-tight">Technical evaluation for major workovers (WO/RC). Increase due to poor well performance.</p>
                 </div>
             </div>
         </div>
@@ -295,24 +295,24 @@
                     </h3>
                     <div class="grid grid-cols-2 gap-4">
                         <div class="p-3 bg-blue-50 rounded-xl">
-                            <p class="text-[9px] font-bold text-blue-800 uppercase">Injection (MBPD)</p>
-                            <p class="text-2xl font-black text-primary">9,907</p>
+                            <p class="text-[9px] font-bold text-blue-800 uppercase">Injection (MBD)</p>
+                            <p class="text-2xl font-black text-primary">13,665</p>
                         </div>
                         <div class="p-3 bg-blue-50 rounded-xl">
-                            <p class="text-[9px] font-bold text-blue-800 uppercase">Inventory (MBPD)</p>
+                            <p class="text-[9px] font-bold text-blue-800 uppercase">Inventory (MBD)</p>
                             <p class="text-2xl font-black text-primary">40,320</p>
                         </div>
                         <div class="p-3 bg-slate-50 rounded-xl">
-                            <p class="text-[9px] font-bold text-slate-500 uppercase">Received (MBPD)</p>
-                            <p class="text-lg font-bold text-green-600">10,914</p>
+                            <p class="text-[9px] font-bold text-slate-500 uppercase">Received (MBD)</p>
+                            <p class="text-lg font-bold text-green-600">10,908</p>
                         </div>
                         <div class="p-3 bg-slate-50 rounded-xl">
-                            <p class="text-[9px] font-bold text-slate-500 uppercase">Autonomy (Hrs)</p>
+                            <p class="text-[9px] font-bold text-slate-500 uppercase">Run Time (Hrs)</p>
                             <p class="text-lg font-bold text-green-600 leading-tight">82.17</p>
                         </div>
                     </div>
                     <div class="mt-4 p-2 bg-slate-50 border-t border-slate-100 flex justify-between items-center">
-                         <span class="text-[9px] font-bold text-slate-400 uppercase">Quality Received:</span>
+                         <span class="text-[9px] font-bold text-slate-400 uppercase">Received Quality:</span>
                          <span class="text-xs font-black text-primary">58.8 °API</span>
                     </div>
                 </div>
@@ -354,14 +354,14 @@
                                 <span class="text-[9px] font-black text-orange-900 uppercase">Upgrader</span>
                                 <div class="flex gap-4">
                                     <div class="text-right"><span class="text-[8px] font-bold text-red-600 uppercase mr-1">Expired:</span><span class="text-xs font-black">08</span></div>
-                                    <div class="text-right"><span class="text-[8px] font-bold text-green-700 uppercase mr-1">Active:</span><span class="text-xs font-black">06</span></div>
+                                    <div class="text-right"><span class="text-[8px] font-bold text-green-700 uppercase mr-1">Current:</span><span class="text-xs font-black">06</span></div>
                                 </div>
                             </div>
                             <div class="flex items-center justify-between bg-orange-50 p-2 rounded-lg border border-orange-100">
                                 <span class="text-[9px] font-black text-orange-900 uppercase">Production</span>
                                 <div class="flex gap-4">
                                     <div class="text-right"><span class="text-[8px] font-bold text-red-600 uppercase mr-1">Expired:</span><span class="text-xs font-black">30</span></div>
-                                    <div class="text-right"><span class="text-[8px] font-bold text-green-700 uppercase mr-1">Active:</span><span class="text-xs font-black">11</span></div>
+                                    <div class="text-right"><span class="text-[8px] font-bold text-green-700 uppercase mr-1">Current:</span><span class="text-xs font-black">11</span></div>
                                 </div>
                             </div>
                         </div>
@@ -377,7 +377,7 @@
                                 <i class="fas fa-chart-pie mr-2 text-accent"></i> Total Potential Variation
                             </h3>
                             <div class="text-right">
-                                <span class="bg-accent text-primary px-3 py-1 rounded-full font-black text-xs">-26,888 MBPD</span>
+                                <span class="bg-accent text-primary px-3 py-1 rounded-full font-black text-xs">-26,854 MBD</span>
                             </div>
                         </div>
                         
@@ -393,33 +393,33 @@
                                 <tbody class="divide-y divide-slate-100">
                                     <tr class="explanation-row">
                                     <td class="p-3 font-bold text-primary italic">1. PULLING UNITS</td>
-                                    <td class="p-3 text-red-600 font-bold text-center">-2,343</td>
-                                    <td class="p-3 text-slate-600 text-[9px] leading-tight">Major Pulling 17 wells: -R2106 (-0.270 MBPD), RBCP; -JK2204 (-0.150 MBPD), RBCP; -LM2306 (-0.315 MBPD), RBCP.</td>
+                                    <td class="p-3 text-red-600 font-bold text-center">-2,248</td>
+                                    <td class="p-3 text-slate-600 text-[9px] leading-tight">Major Pulling 17 wells: -LM2306 (-0.315 MBD), RBCP; -RS1908 (-0.136 MBD), RBCP; -GH3514 (-0.070 MBD), RBCP.</td>
                                 </tr>
                                 <tr class="explanation-row">
-                                    <td class="p-3 font-bold text-primary italic">2. PROCUREMENT/MATERIALS</td>
+                                    <td class="p-3 font-bold text-primary italic">2. MATERIALS PROCUREMENT</td>
                                     <td class="p-3 text-red-600 font-bold text-center">-14,364</td>
-                                    <td class="p-3 text-slate-600 text-[9px] leading-tight">▪️(-14,364 MBPD) 149 Cat 2 wells due to materials unavailability.</td>
+                                    <td class="p-3 text-slate-600 text-[9px] leading-tight">▪️(-14,364 MBD) 148 Cat 2 wells due to Material Unavailability.</td>
                                 </tr>
                                 <tr class="explanation-row">
-                                    <td class="p-3 font-bold text-primary italic">3. RESERVOIRS</td>
+                                    <td class="p-3 font-bold text-primary italic">3. RESERVOIR</td>
                                     <td class="p-3 text-red-600 font-bold text-center">-1,408</td>
-                                    <td class="p-3 text-slate-600 text-[9px] leading-tight">Reservoirs 19 wells: (-0.195 MBPD), 02 wells adjusted for BS&W control. (-0.958 MBPD), 14 wells adjusted for low submergence. (-0.255 MBPD), 03 wells adjusted for high GOR.</td>
+                                    <td class="p-3 text-slate-600 text-[9px] leading-tight">19 wells: ▪️(-0.195 MBD), 02 wells adjusted for BS&W control. ▪️(-0.958 MBD), 14 wells adjusted for low submergence. ▪️(-0.255 MBD), 03 wells adjusted for High GOR.</td>
                                 </tr>
                                 <tr class="explanation-row">
                                     <td class="p-3 font-bold text-primary italic">4. OPERATIONS</td>
-                                    <td class="p-3 text-red-600 font-bold text-center">-6,407</td>
-                                    <td class="p-3 text-slate-600 text-[9px] leading-tight">Operations: (-6.407 MBPD), Potential uncertainty due to well testing.</td>
+                                    <td class="p-3 text-red-600 font-bold text-center">-6,468</td>
+                                    <td class="p-3 text-slate-600 text-[9px] leading-tight">Potential uncertainty due to well testing.</td>
                                 </tr>
                                 <tr class="explanation-row">
                                     <td class="p-3 font-bold text-primary italic">5. OPTIMIZATION</td>
-                                    <td class="p-3 text-red-600 font-bold text-center">-1,113</td>
-                                    <td class="p-3 text-slate-600 text-[9px] leading-tight">Optimization: 13 deficient wells per latest test. (-0.025 MBPD) PQ2005. (-0.015 MBPD) DF1404. (-0.043 MBPD) FG2504. (-0.046 MBPD) GH3505.</td>
+                                    <td class="p-3 text-red-600 font-bold text-center">-1,438</td>
+                                    <td class="p-3 text-slate-600 text-[9px] leading-tight">(-0.984 MBD) 13 deficient wells per latest test. ▪(- 0.012 MBD) FG2504. (- 0.022 MBD) GH3505. (-0.270 MBD) R2106 cleaning. (-0.150 MBD) JK2204 cleaning.</td>
                                 </tr>
                                 <tr class="explanation-row">
                                     <td class="p-3 font-bold text-primary italic">6. OPERATIONAL MAINTENANCE</td>
-                                    <td class="p-3 text-red-600 font-bold text-center">-0.270</td>
-                                    <td class="p-3 text-slate-600 text-[9px] leading-tight">Op Maintenance: (-0.270 MBPD), Well R2106 under assembly process.</td>
+                                    <td class="p-3 text-slate-600 font-bold text-center">0</td>
+                                    <td class="p-3 text-slate-600 text-[9px] leading-tight">No reported impacts from major maintenance.</td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -428,15 +428,15 @@
                         <div class="flex justify-between items-start">
                             <span class="text-[9px] font-black text-blue-900 uppercase">Var vs Prev Day:</span>
                             <div class="flex flex-col gap-0.5 text-right">
-                                <span class="text-[9px] font-bold text-green-600 tracking-tight"><i class="fas fa-plus"></i> (+0.013 MBPD)</span>
-                                <span class="text-[8px] text-slate-500 italic max-w-xs">(+ 0.013 MBPD), Field adjustment and optimization.</span>
+                                <span class="text-[9px] font-bold text-green-600 tracking-tight"><i class="fas fa-plus"></i> (+0.034 MBD)</span>
+                                <span class="text-[8px] text-slate-500 italic max-w-xs">( -0.315 MBD) Well LM2306 RBCP. (-0.120 MBD) Multiphase system destabilization. (+0.469 MBD) Field optimization.</span>
                             </div>
                         </div>
                         <div class="flex justify-between items-start mt-1">
                             <span class="text-[9px] font-black text-blue-900 uppercase">Var vs Weekly Plan:</span>
                             <div class="flex flex-col gap-0.5 text-right">
-                                <span class="text-[9px] font-bold text-blue-700 tracking-tight"><i class="fas fa-plus"></i> (+0.035 MBPD)</span>
-                                <span class="text-[8px] text-slate-500 italic max-w-xs">(+ 0.035 MBPD), Field adjustment and optimization.</span>
+                                <span class="text-[9px] font-bold text-blue-700 tracking-tight"><i class="fas fa-plus"></i> (+0.069 MBD)</span>
+                                <span class="text-[8px] text-slate-500 italic max-w-xs">( -0.315 MBD) Well LM2306 RBCP. (-0.085 MBD) Multiphase system destabilization. (+0.469 MBD) Field optimization.</span>
                             </div>
                         </div>
                     </div>
@@ -451,13 +451,13 @@
                         </h3>
                         <div class="flex items-center gap-2 bg-white/50 px-3 py-1 rounded-full">
                             <i class="fas fa-oil-can text-primary text-xs"></i>
-                            <span class="font-black text-xs">REAL COST: 6.24 $/BBL</span>
+                            <span class="font-black text-xs">ACTUAL COST: 6.24 $/BBL</span>
                         </div>
                     </div>
                     <div class="p-4 grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <div class="flex justify-between items-center mb-3">
-                                <span class="text-[11px] font-black text-primary uppercase">OPEX (Operating Expenditure)</span>
+                                <span class="text-[11px] font-black text-primary uppercase">OPEX (Operating Expense)</span>
                                 <span class="text-[10px] font-bold text-slate-400">Total: 21.92 MM$</span>
                             </div>
                             <div class="space-y-3">
@@ -515,7 +515,7 @@
 
         <footer class="bg-slate-800 text-center py-8 text-slate-400 text-[10px] uppercase font-bold tracking-[0.2em]">
             <div class="container mx-auto px-4">
-                <p>General Management - Petrolera Roraima</p>
+                <p>General Management - Roraima Oil</p>
                 <p class="mt-1">&copy; 2026 A&B Oil and Gas</p>
             </div>
         </footer>
@@ -529,7 +529,8 @@
 
         function updateCurrentDate() {
             const dateSpan = document.getElementById('current-date');
-            dateSpan.textContent = "May 12, 2026";
+            // Using US date format: May 13th, 2026
+            dateSpan.textContent = "May 13, 2026";
         }
 
         function initCharts() {
@@ -555,7 +556,7 @@
                 14.534, 13.666, 15.245, 16.069, 18.088, 18.691, 19.542, 18.429, 18.513, 18.713, 19.439, 18.502, 18.562, 18.625, 18.682, 20.057, 20.079, 20.108, 20.1, 20.095, 20.116, 20.089, 20.251, 20.385, 20.992, 20.311, 20.196, 20.109,
                 20.308, 20.735, 20.371, 20.454, 20.531, 21.569, 21.428, 21.532, 21.042, 22.502, 23.334, 23.604, 24.07, 24.022, 24.067, 24.031, 24.535, 24.466, 24.529, 24.61, 24.637, 24.615, 24.07, 24.086, 24.06, 24.275, 24.22, 24.216, 24.266, 24.527, 24.629,
                 24.432, 24.405, 24.44, 24.73, 24.451, 24.687, 24.718, 24.558, 26.824, 29, 29.083, 29.069, 29.128, 29.664, 32.079, 34.383, 34.311, 34.424, 34.402, 34.408, 35.019, 35.56, 35.56, 35.692, 35.821, 36.056, 36.046, 36.328, 36.221, 36.412,
-                36.709, 36.715, 36.769, 36.737, 36.922, 36.918, 36.790, 37.055, 36.645, 36.961, 37.022, 37.035
+                36.709, 36.715, 36.769, 36.737, 36.922, 36.918, 36.790, 37.055, 36.645, 36.961, 37.022, 37.035, 37.069
             ];
 
             new Chart(ctx, {
@@ -564,7 +565,7 @@
                     labels: labels,
                     datasets: [
                         { 
-                            label: 'REAL (MBPD)', 
+                            label: 'ACTUAL (MBD)', 
                             data: realData, 
                             borderColor: '#1d1d86', 
                             backgroundColor: 'rgba(29, 29, 134, 0.1)', 
@@ -575,7 +576,7 @@
                             pointBackgroundColor: '#dc2626'
                         },
                         { 
-                            label: 'PLAN (Dots)', 
+                            label: 'PLAN (Points)', 
                             data: planData, 
                             borderColor: '#dc2626', 
                             backgroundColor: '#dc2626', 
@@ -626,14 +627,14 @@
 
             const sparkCtx = document.getElementById('weeklySparkline').getContext('2d');
             const sparkPlan = [37.000, 37.050, 37.100, 37.120, 37.150, 37.180, 37.200]; 
-            const sparkReal = [37.022, 37.035, null, null, null, null, null]; 
+            const sparkReal = [37.022, 37.035, 37.069, null, null, null, null]; 
             
             new Chart(sparkCtx, {
                 type: 'line',
                 data: {
                     labels: ['Mon 11', 'Tue 12', 'Wed 13', 'Thu 14', 'Fri 15', 'Sat 16', 'Sun 17'],
                     datasets: [
-                        { label: 'REAL', data: sparkReal, borderColor: '#22c55e', borderWidth: 2, pointRadius: 4, pointBackgroundColor: '#22c55e', fill: false, tension: 0 },
+                        { label: 'ACTUAL', data: sparkReal, borderColor: '#22c55e', borderWidth: 2, pointRadius: 4, pointBackgroundColor: '#22c55e', fill: false, tension: 0 },
                         { label: 'PLAN', data: sparkPlan, borderColor: '#94a3b8', borderWidth: 1.5, borderDash: [2, 2], pointRadius: 0, fill: false, tension: 0 }
                     ]
                 },
