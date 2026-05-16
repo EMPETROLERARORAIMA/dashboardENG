@@ -35,7 +35,7 @@
         @media (max-width: 640px) { .header-info { border-left: none; padding-left: 0; padding-top: 0.5rem; margin-top: 0.5rem; border-top: 1px solid rgba(255,255,255,0.1); } }
         .card-kpi { background: white; border-radius: 12px; padding: 0.75rem; border-bottom: 4px solid transparent; min-height: 110px; display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.2s; }
         .explanation-row:nth-child(even) { background-color: #f9fafb; }
-        .chart-container { position: relative; height: 350px; width: 100%; }
+        .chart-container { position: relative; height: 380px; width: 100%; }
         .sparkline-container { height: 35px; width: 100%; margin-top: 4px; }
         .mini-financial-chart { height: 120px; width: 100%; }
         .summary-badge { font-size: 8px; font-weight: 800; padding: 2px 5px; border-radius: 4px; text-transform: uppercase; }
@@ -62,36 +62,38 @@
         </header>
 
         <main class="container mx-auto px-4 py-6 md:py-10 pb-16">
+        
+        <!-- Main KPIs (Updated 05/16/2026) -->
         <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3 mb-8">
             <div class="card-kpi card-shadow border-blue-600">
                 <p class="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase">Current Production</p>
-                <div class="my-1"><span class="text-lg md:text-xl font-black text-gray-800">36,436</span><span class="text-[9px] text-gray-400 font-bold ml-1">MBPD</span></div>
-                <p class="text-[9px] font-bold text-red-600"><i class="fas fa-caret-down"></i> -0.596 vs Prev.</p>
+                <div class="my-1"><span class="text-lg md:text-xl font-black text-gray-800">36,501</span><span class="text-[9px] text-gray-400 font-bold ml-1">MBD</span></div>
+                <p class="text-[9px] font-bold text-green-600"><i class="fas fa-caret-up"></i> +0.065 vs Prev.</p>
             </div>
             <div class="card-kpi card-shadow border-purple-600">
                 <p class="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase">Previous Day</p>
-                <div class="my-1"><span class="text-lg md:text-xl font-black text-gray-800">37,032</span><span class="text-[9px] text-gray-400 font-bold ml-1">MBPD</span></div>
-                <p class="text-[9px] font-bold text-slate-400 uppercase">Baseline</p>
+                <div class="my-1"><span class="text-lg md:text-xl font-black text-gray-800">36,436</span><span class="text-[9px] text-gray-400 font-bold ml-1">MBD</span></div>
+                <p class="text-[9px] font-bold text-slate-400 uppercase">Reference</p>
             </div>
             <div class="card-kpi card-shadow border-blue-900">
                 <p class="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase">Month Average</p>
-                <div class="my-1"><span class="text-lg md:text-xl font-black text-gray-800">36,898</span><span class="text-[9px] text-gray-400 font-bold ml-1">MBPD</span></div>
-                <p class="text-[8px] font-bold text-blue-600 uppercase leading-tight">Prev Month: 31,099 MBPD</p>
+                <div class="my-1"><span class="text-lg md:text-xl font-black text-gray-800">36,865</span><span class="text-[9px] text-gray-400 font-bold ml-1">MBD</span></div>
+                <p class="text-[8px] font-bold text-blue-600 uppercase leading-tight">April: 31,099 MBD</p>
             </div>
             <div class="card-kpi card-shadow border-cyan-600">
                 <p class="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase">% BS&W</p>
-                <div class="my-1"><span class="text-lg md:text-xl font-black text-gray-800">1.69</span><span class="text-[9px] text-gray-400 font-bold ml-1">%</span></div>
+                <div class="my-1"><span class="text-lg md:text-xl font-black text-gray-800">1.693</span><span class="text-[9px] text-gray-400 font-bold ml-1">%</span></div>
                 <p class="text-[9px] font-bold text-green-600 uppercase">Controlled</p>
             </div>
             <div class="card-kpi card-shadow border-green-600">
                 <p class="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase">Cat 1 Potential</p>
-                <div class="my-1"><span class="text-lg md:text-xl font-black text-green-700">38,037</span><span class="text-[9px] text-gray-400 font-bold ml-1">MBPD</span></div>
+                <div class="my-1"><span class="text-lg md:text-xl font-black text-green-700">37,855</span><span class="text-[9px] text-gray-400 font-bold ml-1">MBD</span></div>
                 <p class="text-[9px] font-bold text-gray-400 uppercase italic">Capacity</p>
             </div>
             <div class="card-kpi card-shadow border-slate-400">
-                <p class="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase">AOP Commitment</p>
-                <div class="my-1"><span class="text-lg md:text-xl font-black text-gray-800">38,695</span><span class="text-[9px] text-gray-400 font-bold ml-1">MBPD</span></div>
-                <p class="text-[9px] font-bold text-red-600 uppercase"><i class="fas fa-caret-down"></i> -2.259 vs Actual</p>
+                <p class="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase">POA Commitment</p>
+                <div class="my-1"><span class="text-lg md:text-xl font-black text-gray-800">38,695</span><span class="text-[9px] text-gray-400 font-bold ml-1">MBD</span></div>
+                <p class="text-[9px] font-bold text-red-600 uppercase"><i class="fas fa-caret-down"></i> vs Real</p>
             </div>
             <div class="card-kpi card-shadow border-teal-500">
                 <p class="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase">Active Clusters</p>
@@ -100,23 +102,24 @@
             </div>
             <div class="card-kpi card-shadow border-orange-500">
                 <p class="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase">Weekly Commitment</p>
-                <div class="mt-1 leading-none"><span class="text-base md:text-lg font-black text-gray-800"> 37,100</span><span class="text-[9px] text-gray-400 font-bold ml-1">MBbls</span></div>
+                <div class="mt-1 leading-none"><span class="text-base md:text-lg font-black text-gray-800">37,200</span><span class="text-[9px] text-gray-400 font-bold ml-1">Mbbls</span></div>
                 <div class="sparkline-container">
                     <canvas id="weeklySparkline"></canvas>
                 </div>
-                <p class="text-[8px] font-bold text-orange-600 uppercase mt-1">Var vs Proj: -0.664</p>
+                <p class="text-[8px] font-bold text-red-600 uppercase mt-1">Diff. vs Plan: -0.699</p>
             </div>
         </div>
 
+       <!-- REAL vs PLAN Production Chart -->
         <div class="bg-white p-4 md:p-6 rounded-xl shadow-md border border-slate-200 mb-10">
             <div class="flex flex-col md:flex-row md:items-center justify-between mb-6 gap-2">
                 <h2 class="text-xs md:text-sm font-black text-primary uppercase tracking-widest flex items-center">
-                    <i class="fas fa-chart-line mr-2 text-accent"></i> ACTUAL vs PLAN Production - (MBPD)
+                    <i class="fas fa-chart-line mr-2 text-accent"></i> REAL vs PLAN Production - (MBD)
                 </h2>
                 <div class="flex gap-4">
                     <div class="flex items-center gap-2">
                         <span class="w-3 h-3 bg-primary rounded-full"></span>
-                        <span class="text-[10px] font-bold text-slate-500 uppercase">Actual</span>
+                        <span class="text-[10px] font-bold text-slate-500 uppercase">Real</span>
                     </div>
                     <div class="flex items-center gap-2">
                         <span class="w-3 h-3 bg-red-600 rounded-full"></span>
@@ -142,12 +145,14 @@
                 </div>
                 <div class="p-4">
                     <div class="grid grid-cols-2 gap-y-3 gap-x-2 text-[11px] mb-4">
-                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Well</p><p class="font-black">Awaiting Assignment</p></div>
-                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Activity</p><p class="font-black text-red-600">Awaiting Assignment</p></div>
-                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Wells YTD</p><p class="font-black text-primary">50</p></div>
-                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Barrels YTD</p><p class="font-black">6,411</p></div>
+                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Cluster/Well</p><p class="font-black">PQ23 / PQ23-03</p></div>
+                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Plan/Real Day</p><p class="font-black text-blue-600">1 / 0.1</p></div>
+                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Wells Month/Year</p><p class="font-black text-primary">5 / 52</p></div>
+                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Bbls Month/Year</p><p class="font-black">195 / 6,531</p></div>
                     </div>
-                    <div class="bg-blue-50 rounded-lg p-2 border border-blue-100"><p class="text-[10px] font-bold text-blue-900 italic leading-tight">Status: Awaiting new well assignment, NPT 76 Hrs.</p></div>
+                    <div class="bg-blue-50 rounded-lg p-2 border border-blue-100">
+                        <p class="text-[9px] font-bold text-blue-900 leading-tight">Actual: Discharging well pressures to vent tank. Activity in progress. NPT: 2.5 Hrs.</p>
+                    </div>
                 </div>
             </div>
 
@@ -159,12 +164,14 @@
                 </div>
                 <div class="p-4">
                     <div class="grid grid-cols-2 gap-y-3 gap-x-2 text-[11px] mb-4">
-                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Well</p><p class="font-black">NO21-06</p></div>
-                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Activity</p><p class="font-black">RBCP (PC Pump Exchange)</p></div>
-                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Wells YTD</p><p class="font-black text-primary">12</p></div>
-                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Barrels YTD</p><p class="font-black text-red-600">2,387</p></div>
+                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Cluster/Well</p><p class="font-black">NO21 / NO21-06</p></div>
+                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Plan/Real Day</p><p class="font-black text-blue-600">3.5 / 2.1</p></div>
+                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Wells Month/Year</p><p class="font-black text-primary">4 / 12</p></div>
+                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Bbls Year</p><p class="font-black">2,387</p></div>
                     </div>
-                    <div class="bg-blue-50 rounded-lg p-2 border border-blue-100"><p class="text-[10px] font-bold text-blue-900 italic leading-tight">Summary: SFH 2172 Ft 4.5 In EUE Tubing + Prod BHA. Current: RIH 60 Ft 4.5 In EUE Tubing + Test BHA, testing every 300 Ft at 500 PSI.</p></div>
+                    <div class="bg-blue-50 rounded-lg p-2 border border-blue-100">
+                        <p class="text-[9px] font-bold text-blue-900 leading-tight">Actual: Operations halted due to drawworks failure. NPT: 3 Hrs.</p>
+                    </div>
                 </div>
             </div>
 
@@ -176,12 +183,14 @@
                 </div>
                 <div class="p-4">
                     <div class="grid grid-cols-2 gap-y-3 gap-x-2 text-[11px] mb-4">
-                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Well</p><p class="font-black">LM23-06</p></div>
-                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Activity</p><p class="font-black">RBCP</p></div>
-                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Wells YTD</p><p class="font-black text-primary">07</p></div>
-                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Barrels YTD</p><p class="font-black text-red-600">0.994</p></div>
+                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Cluster/Well</p><p class="font-black">LM23 / LM23-06</p></div>
+                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Plan/Real Day</p><p class="font-black text-blue-600">3.5 / 3.7</p></div>
+                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Wells Month/Year</p><p class="font-black text-primary">5 / 7</p></div>
+                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Bbls Year</p><p class="font-black">994</p></div>
                     </div>
-                    <div class="bg-blue-50 rounded-lg p-2 border border-blue-100"><p class="text-[10px] font-bold text-blue-900 italic leading-tight">Summary: BCP Borescope Review. ND stuffing box + BP, NU R-BOP. Operations suspended due to beehive presence and ambulance lack. Current: Floor rigging 20%.</p></div>
+                    <div class="bg-blue-50 rounded-lg p-2 border border-blue-100">
+                        <p class="text-[9px] font-bold text-blue-900 leading-tight">Actual: RIH test BHA + PVC plug + 1200 Ft of 5.5 In LTC TBG string.</p>
+                    </div>
                 </div>
             </div>
 
@@ -193,12 +202,14 @@
                 </div>
                 <div class="p-4">
                     <div class="grid grid-cols-2 gap-y-3 gap-x-2 text-[11px] mb-4">
-                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Well</p><p class="font-black">Q27-03</p></div>
-                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Job</p><p class="font-black">RBCP</p></div>
-                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Wells YTD</p><p class="font-black text-primary">0</p></div>
-                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Barrels YTD</p><p class="font-black text-red-600">0</p></div>
+                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Cluster/Well</p><p class="font-black">Q27 / Q27-03</p></div>
+                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Plan/Real Day</p><p class="font-black text-blue-600">3.5 / 1</p></div>
+                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Wells Year</p><p class="font-black text-primary">0 / 0</p></div>
+                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Bbls Year</p><p class="font-black">0</p></div>
                     </div>
-                    <div class="bg-blue-50 rounded-lg p-2 border border-blue-100"><p class="text-[10px] font-bold text-blue-900 italic leading-tight">Current: Rig controlled. Awaiting site entry permit. Plan: Move rig 100% to well Q27-03.</p></div>
+                    <div class="bg-blue-50 rounded-lg p-2 border border-blue-100">
+                        <p class="text-[9px] font-bold text-blue-900 leading-tight">Actual: NU spherical BOP, 50% charging pressures.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -209,49 +220,37 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
             <div class="bg-white p-4 rounded-xl shadow-md border-l-4 border-blue-600">
                 <div class="flex justify-between items-start">
-                    <div>
-                        <p class="text-[10px] font-bold text-slate-500 uppercase">Category 1 Wells</p>
-                        <h4 class="text-2xl font-black text-blue-900">263</h4>
-                    </div>
+                    <div><p class="text-[10px] font-bold text-slate-500 uppercase">Category 1 Wells</p><h4 class="text-2xl font-black text-blue-900">263</h4></div>
                     <span class="bg-blue-100 text-blue-700 text-[9px] font-black px-2 py-1 rounded">ACTIVE</span>
                 </div>
                 <div class="mt-3 pt-3 border-t border-slate-50">
                     <p class="text-[9px] font-bold text-slate-400 uppercase">Available Potential</p>
-                    <p class="text-lg font-black text-blue-600">38,037 <span class="text-[10px]">MBPD</span></p>
+                    <p class="text-lg font-black text-blue-600">37,855 <span class="text-[10px]">MBD</span></p>
                 </div>
             </div>
-            
             <div class="bg-white p-4 rounded-xl shadow-md border-l-4 border-orange-600">
                 <div class="flex justify-between items-start">
-                    <div>
-                        <p class="text-[10px] font-bold text-slate-500 uppercase">Category 2 Wells</p>
-                        <h4 class="text-2xl font-black text-orange-900">173</h4>
-                    </div>
+                    <div><p class="text-[10px] font-bold text-slate-500 uppercase">Category 2 Wells</p><h4 class="text-2xl font-black text-orange-900">437</h4></div>
                     <span class="bg-orange-100 text-orange-700 text-[9px] font-black px-2 py-1 rounded">RESTRICTED</span>
                 </div>
                 <div class="mt-3 pt-3 border-t border-slate-50">
                     <p class="text-[9px] font-bold text-slate-400 uppercase">Available Potential</p>
-                    <p class="text-lg font-black text-orange-600">14,207 <span class="text-[10px]">MBPD</span></p>
+                    <p class="text-lg font-black text-orange-600">52,417 <span class="text-[10px]">MBD</span></p>
                 </div>
             </div>
-
             <div class="bg-white p-4 rounded-xl shadow-md border-l-4 border-slate-400">
                 <div class="flex justify-between items-start">
-                    <div>
-                        <p class="text-[10px] font-bold text-slate-500 uppercase">Category 3 Wells</p>
-                        <h4 class="text-2xl font-black text-slate-900">116</h4>
-                    </div>
+                    <div><p class="text-[10px] font-bold text-slate-500 uppercase">Category 3 Wells</p><h4 class="text-2xl font-black text-slate-900">116</h4></div>
                     <span class="bg-slate-100 text-slate-700 text-[9px] font-black px-2 py-1 rounded">REVIEW</span>
                 </div>
                 <div class="mt-3 pt-3 border-t border-slate-50">
-                    <p class="text-[9px] font-bold text-slate-400 uppercase">Under technical review for future Workover/Recompletion jobs.</p>
+                    <p class="text-[9px] font-bold text-slate-400 uppercase">Technical review for future WO/RC jobs</p>
                 </div>
             </div>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
-            
-            <!-- Left Column: Naphtha and Contracts -->
+            <!-- Left Column: Diluent and Contracts -->
             <div class="lg:col-span-4 flex flex-col gap-6">
                 <!-- Diluent Management -->
                 <div class="bg-white p-6 rounded-xl shadow-md border border-slate-100">
@@ -259,37 +258,25 @@
                         <i class="fas fa-oil-can mr-2 text-accent"></i> Diluent Management (Naphtha)
                     </h3>
                     <div class="grid grid-cols-2 gap-4">
-                        <div class="p-3 bg-blue-50 rounded-xl">
-                            <p class="text-[9px] font-bold text-blue-800 uppercase">Injection (MBPD)</p>
-                            <p class="text-2xl font-black text-primary">9,877</p>
-                        </div>
-                        <div class="p-3 bg-blue-50 rounded-xl">
-                            <p class="text-[9px] font-bold text-blue-800 uppercase">Inventory (MBPD)</p>
-                            <p class="text-2xl font-black text-primary">40,320</p>
-                        </div>
-                        <div class="p-3 bg-slate-50 rounded-xl">
-                            <p class="text-[9px] font-bold text-slate-500 uppercase">Received (MBPD)</p>
-                            <p class="text-lg font-bold text-green-600">10,897</p>
-                        </div>
-                        <div class="p-3 bg-slate-50 rounded-xl">
-                            <p class="text-[9px] font-bold text-slate-500 uppercase">Autonomy (Hrs)</p>
-                            <p class="text-lg font-bold text-green-600 leading-tight">82.17</p>
-                        </div>
+                        <div class="p-3 bg-blue-50 rounded-xl"><p class="text-[9px] font-bold text-blue-800 uppercase">Injection (MBD)</p><p class="text-2xl font-black text-primary">11,749</p></div>
+                        <div class="p-3 bg-blue-50 rounded-xl"><p class="text-[9px] font-bold text-blue-800 uppercase">Inventory (MBD)</p><p class="text-2xl font-black text-primary">40,320</p></div>
+                        <div class="p-3 bg-slate-50 rounded-xl"><p class="text-[9px] font-bold text-slate-500 uppercase">Received (MBD)</p><p class="text-lg font-bold text-green-600">11,897</p></div>
+                        <div class="p-3 bg-slate-50 rounded-xl"><p class="text-[9px] font-bold text-slate-500 uppercase">Autonomy (Hrs)</p><p class="text-lg font-bold text-green-600 leading-tight">82.17</p></div>
                     </div>
                     <div class="mt-4 p-2 bg-slate-50 border-t border-slate-100 flex justify-between items-center">
-                         <span class="text-[9px] font-bold text-slate-400 uppercase">Received Quality:</span>
+                         <span class="text-[9px] font-bold text-slate-400 uppercase">Quality Received:</span>
                          <span class="text-xs font-black text-primary">58.6 °API</span>
                     </div>
                 </div>
 
                  <!-- Contract Management -->
-                <div class="bg-white p-6 rounded-xl shadow-md border border-slate-100">
+                 <div class="bg-white p-6 rounded-xl shadow-md border border-slate-100">
                     <h3 class="font-bold text-primary mb-5 border-b border-slate-100 pb-3 flex items-center text-sm uppercase">
                         <i class="fas fa-file-contract mr-2 text-accent"></i> Contract Management
                     </h3>
                     <div class="mb-4">
                         <p class="text-[10px] font-black text-slate-400 uppercase mb-2 flex items-center tracking-wider">
-                            <span class="w-1.5 h-1.5 bg-blue-600 rounded-full mr-2"></span> Service Orders (SO)
+                            <span class="w-1.5 h-1.5 bg-blue-600 rounded-full mr-2"></span> Service Orders (ODS)
                         </p>
                         <div class="grid grid-cols-2 gap-3">
                             <div class="bg-slate-50 p-2 rounded-lg border border-slate-100">
@@ -312,20 +299,20 @@
                     </div>
                     <div>
                         <p class="text-[10px] font-black text-slate-400 uppercase mb-2 flex items-center tracking-wider">
-                            <span class="w-1.5 h-1.5 bg-orange-500 rounded-full mr-2"></span> Purchase Orders (PO)
+                            <span class="w-1.5 h-1.5 bg-orange-500 rounded-full mr-2"></span> Purchase Orders (ODC)
                         </p>
                         <div class="flex flex-col gap-2">
                             <div class="flex items-center justify-between bg-orange-50 p-2 rounded-lg border border-orange-100">
                                 <span class="text-[9px] font-black text-orange-900 uppercase">Upgrader</span>
                                 <div class="flex gap-4">
-                                    <div class="text-right"><span class="text-[8px] font-bold text-red-600 uppercase mr-1">Overdue:</span><span class="text-xs font-black">08</span></div>
+                                    <div class="text-right"><span class="text-[8px] font-bold text-red-600 uppercase mr-1">Expired:</span><span class="text-xs font-black">08</span></div>
                                     <div class="text-right"><span class="text-[8px] font-bold text-green-700 uppercase mr-1">Current:</span><span class="text-xs font-black">06</span></div>
                                 </div>
                             </div>
                             <div class="flex items-center justify-between bg-orange-50 p-2 rounded-lg border border-orange-100">
                                 <span class="text-[9px] font-black text-orange-900 uppercase">Production</span>
                                 <div class="flex gap-4">
-                                    <div class="text-right"><span class="text-[8px] font-bold text-red-600 uppercase mr-1">Overdue:</span><span class="text-xs font-black">30</span></div>
+                                    <div class="text-right"><span class="text-[8px] font-bold text-red-600 uppercase mr-1">Expired:</span><span class="text-xs font-black">30</span></div>
                                     <div class="text-right"><span class="text-[8px] font-bold text-green-700 uppercase mr-1">Current:</span><span class="text-xs font-black">11</span></div>
                                 </div>
                             </div>
@@ -333,80 +320,51 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Right Column: Potential Variation and Finance -->
+            
+            <!-- Right Column: Variation and Financial Management -->
             <div class="lg:col-span-8 flex flex-col gap-6">
-                <div class="bg-white rounded-xl shadow-md border border-slate-100 overflow-hidden">
+                <!-- Total Potential Variation -->
+                <div class="bg-white rounded-xl shadow-md border border-slate-200 overflow-hidden mb-0">
                     <div class="bg-primary p-3 text-white flex justify-between items-center">
                         <h3 class="text-[10px] md:text-xs font-bold uppercase flex items-center">
                             <i class="fas fa-chart-pie mr-2 text-accent"></i> Total Potential Variation
                         </h3>
-                        <div class="text-right">
-                            <span class="bg-accent text-primary px-3 py-1 rounded-full font-black text-xs">-27,487 MBPD</span>
-                        </div>
+                        <div class="text-right"><span class="bg-accent text-primary px-3 py-1 rounded-full font-black text-xs">-27,422 MBD</span></div>
                     </div>
-                    
                     <div class="overflow-x-auto">
                         <table class="w-full text-[10px] md:text-[11px] text-left">
                             <thead class="bg-slate-50 text-slate-500 border-b border-slate-100">
-                                <tr>
-                                    <th class="p-3 uppercase font-bold w-1/4">Root Cause</th>
-                                    <th class="p-3 uppercase font-bold text-center">Impact</th>
-                                    <th class="p-3 uppercase font-bold">Details</th>
-                                </tr>
+                                <tr><th class="p-3 uppercase font-bold w-1/4">Root Cause</th><th class="p-3 uppercase font-bold text-center">Impact</th><th class="p-3 uppercase font-bold">Details</th></tr>
                             </thead>
                             <tbody class="divide-y divide-slate-100">
-                                <tr class="explanation-row">
-                                    <td class="p-3 font-bold text-primary italic">1. PULLING UNITS</td>
-                                    <td class="p-3 text-red-600 font-bold text-center">-2,407</td>
-                                    <td class="p-3 text-slate-600 text-[9px] leading-tight">Rig backlog for 17 wells. RBCP: -GH3514 (-0.070 MBPD), -LM2306 (-0.315 MBPD).</td>
-                                </tr>
-                                <tr class="explanation-row">
-                                    <td class="p-3 font-bold text-primary italic">2. PROCUREMENT</td>
-                                    <td class="p-3 text-red-600 font-bold text-center">-14,309</td>
-                                    <td class="p-3 text-slate-600 text-[9px] leading-tight">148 Category 2 wells due to material unavailability.</td>
-                                </tr>
-                                <tr class="explanation-row">
-                                    <td class="p-3 font-bold text-primary italic">3. RESERVOIR</td>
-                                    <td class="p-3 text-red-600 font-bold text-center">-1,408</td>
-                                    <td class="p-3 text-slate-600 text-[9px] leading-tight">19 wells: ▪️(-0.195 MBPD) BS&W control. ▪️(-0.958 MBPD) Low submergence. ▪️(-0.255 MBPD) High GOR.</td>
-                                </tr>
-                                <tr class="explanation-row">
-                                    <td class="p-3 font-bold text-primary italic">4. OPERATIONS</td>
-                                    <td class="p-3 text-red-600 font-bold text-center">-6,958</td>
-                                    <td class="p-3 text-slate-600 text-[9px] leading-tight">(-6.942 MBPD) Testing uncertainty. ▪️(-0.016 MBPD) Increase in % BS&W.</td>
-                                </tr>
-                                <tr class="explanation-row">
-                                    <td class="p-3 font-bold text-primary italic">5. OPTIMIZATION</td>
-                                    <td class="p-3 text-red-600 font-bold text-center">-1,369</td>
-                                    <td class="p-3 text-slate-600 text-[9px] leading-tight">Includes RS1908 (-0.136 MBPD) in cleanup process after BCP replacement.</td>
-                                </tr>
-                                <tr class="explanation-row">
-                                    <td class="p-3 font-bold text-primary italic">6. OP. MAINTENANCE</td>
-                                    <td class="p-3 text-red-600 font-bold text-center">-0,053</td>
-                                    <td class="p-3 text-slate-600 text-[9px] leading-tight">(-0.053 MBPD) JK2509 well shut down for stuffing box packing replacement.</td>
-                                </tr>
+                                <tr class="explanation-row"><td class="p-3 font-bold text-primary italic">1. PULLING UNITS</td><td class="p-3 text-red-600 font-bold text-center">-2,461</td><td class="p-3 text-slate-600 text-[9px] leading-tight">16 wells: -PQ2303 (-0.274), -Q2703 (-0.295), -GH3514 (-0.070), -LM2306 (-0.315).</td></tr>
+                                <tr class="explanation-row"><td class="p-3 font-bold text-primary italic">2. PROCUREMENT</td><td class="p-3 text-red-600 font-bold text-center">-14,309</td><td class="p-3 text-slate-600 text-[9px] leading-tight">148 category 2 wells due to unavailability of materials.</td></tr>
+                                <tr class="explanation-row"><td class="p-3 font-bold text-primary italic">3. RESERVOIRS</td><td class="p-3 text-red-600 font-bold text-center">-1,408</td><td class="p-3 text-slate-600 text-[9px] leading-tight">19 wells: ▪(-0.195) BS&W control, ▪(-0.958) low submergence, ▪(-0.255) High GOR.</td></tr>
+                                <tr class="explanation-row"><td class="p-3 font-bold text-primary italic">4. OPERATIONS</td><td class="p-3 text-red-600 font-bold text-center">-6,218</td><td class="p-3 text-slate-600 text-[9px] leading-tight">(-6.719 MBD) Potential uncertainty from well tests. (+0.501 MBD) Field optimization.</td></tr>
+                                <tr class="explanation-row"><td class="p-3 font-bold text-primary italic">5. OPTIMIZATION</td><td class="p-3 text-red-600 font-bold text-center">-1,233</td><td class="p-3 text-slate-600 text-[9px] leading-tight">FG2504 (-0.012) ramp-up. R2106 (-0.171), JK2204 (-0.066), RS1908 (-0.136) post-PCP cleanup.</td></tr>
+                                <tr class="explanation-row"><td class="p-3 font-bold text-primary italic">6. OPERATIONAL MAINTENANCE</td><td class="p-3 text-red-600 font-bold text-center">-0.220</td><td class="p-3 text-slate-600 text-[9px] leading-tight">(-0.220) LM1701 and LM1707 awaiting assembly for connection.</td></tr>
                             </tbody>
                         </table>
                     </div>
                     <div class="bg-blue-50 p-3 flex flex-col gap-1 border-t border-blue-100">
                         <div class="flex justify-between items-start">
-                            <span class="text-[9px] font-black text-blue-900 uppercase">Var vs Prev Day:</span>
+                            <span class="text-[9px] font-black text-blue-900 uppercase">Var vs Prev. Day:</span>
                             <div class="flex flex-col gap-0.5 text-right">
-                                <span class="text-[9px] font-bold text-red-600 tracking-tight"><i class="fas fa-minus"></i> (-0.596 MBPD)</span>
-                                <span class="text-[8px] text-slate-500 italic max-w-xs">(-0.315 MBPD) LM2306 RBCP. (-0.281 MBPD) Q2703 Damaged BCP.</span>
+                                <span class="text-[9px] font-bold text-green-600 tracking-tight"><i class="fas fa-plus"></i> (+0.065 MBD)</span>
+                                <span class="text-[8px] text-slate-500 italic max-w-xs">(-0.436 MBD) Electrical disturbance. (+0.501 MBD) Field adjustment & optimization.</span>
                             </div>
                         </div>
                         <div class="flex justify-between items-start mt-1">
                             <span class="text-[9px] font-black text-blue-900 uppercase">Var vs Weekly Plan:</span>
                             <div class="flex flex-col gap-0.5 text-right">
-                                <span class="text-[9px] font-bold text-red-600 tracking-tight"><i class="fas fa-minus"></i> (-0.664 MBPD)</span>
-                                <span class="text-[8px] text-slate-500 italic max-w-xs">(-0.016 MBPD) BS&W increase. (-0.300 MBPD) LM2306. (-0.295 MBPD) Q2703. (-0.053 MBPD) JK2509.</span>
+                                <span class="text-[9px] font-bold text-red-600 tracking-tight"><i class="fas fa-minus"></i> (-0.699 MBD)</span>
+                                <span class="text-[8px] text-slate-500 italic max-w-xs">(-0.315) LM2306. (-0.295) Q2703. (-0.590) Electrical disturbance. (+0.501) Optimization.</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- Financial Management (Jan - Mar 2026) -->
                 <div class="bg-white rounded-xl shadow-md border border-slate-100 overflow-hidden">
                     <div class="bg-accent p-3 text-primary flex justify-between items-center">
                         <h3 class="text-[10px] md:text-xs font-bold uppercase flex items-center">
@@ -414,7 +372,7 @@
                         </h3>
                         <div class="flex items-center gap-2 bg-white/50 px-3 py-1 rounded-full">
                             <i class="fas fa-oil-can text-primary text-xs"></i>
-                            <span class="font-black text-xs">ACTUAL COST: 6.24 $/BBL</span>
+                            <span class="font-black text-xs">REAL COST: 6.24 $/BBL</span>
                         </div>
                     </div>
                     <div class="p-4">
@@ -491,208 +449,158 @@
                         <!-- Common Legend -->
                         <div class="mt-6 flex justify-center gap-6 border-t border-slate-50 pt-4">
                             <div class="flex items-center gap-1.5">
-                                <span class="w-3 h-0.5 bg-slate-400"></span>
+                                <span class="w-3 h-0.5 bg-red-600 border-t border-dashed border-red-600"></span>
                                 <span class="text-[9px] font-bold text-slate-500 uppercase">Submitted (S)</span>
                             </div>
                             <div class="flex items-center gap-1.5">
-                                <span class="w-3 h-0.5 bg-primary"></span>
+                                <span class="w-3 h-0.5 bg-blue-600 border-t border-dashed border-blue-600"></span>
                                 <span class="text-[9px] font-bold text-slate-500 uppercase">Approved (A)</span>
                             </div>
                             <div class="flex items-center gap-1.5">
-                                <span class="w-3 h-0.5 bg-accent"></span>
-                                <span class="text-[9px] font-bold text-slate-500 uppercase">Executed (E)</span>
+                                <span class="w-3 h-0.5 bg-green-600"></span>
+                                <span class="text-[9px] font-bold text-slate-500 uppercase">Executed (E/Real)</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </main>
-
+        </main>
+        
         <footer class="bg-slate-800 text-center py-8 text-slate-400 text-[10px] uppercase font-bold tracking-[0.2em]">
             <div class="container mx-auto px-4">
-                <p>General Management - Petrolera Roraima</p>
+                <p>Gerencia General - Petrolera Roraima</p>
                 <p class="mt-1">&copy; 2026 A&B Oil and Gas</p>
             </div>
         </footer>
     </div>
 
     <script>
-        window.onload = function() {
-            updateCurrentDate();
-            initCharts();
-            initFinancialCharts();
-        }
+        // Current Date
+        document.getElementById('current-date').textContent = "May 16, 2026";
 
-        function updateCurrentDate() {
-            const dateSpan = document.getElementById('current-date');
-            dateSpan.textContent = "May 15th, 2026";
-        }
+        // --- CHART DATA ---
+        const planData = [
+            36.4, 36.4, 36.4, 36.4, 36.4, 36.4, 36.4, 36.45, 36.45, 36.45, 36.45, 36.45, 36.45, 36.45, 36.45, 36.45, 36.45, 36.55, 36.55, 36.55, 36.55, 36.55, 36.6, 36.6, 36.6, 36.6, 36.6, 36.6, 36.6, 36.6, 36.65,
+            36.65, 36.6728, 36.6728, 36.6728, 36.6728, 36.6728, 36.6928, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425,
+            36.8737, 36.8737, 36.8737, 36.8737, 36.8737, 36.8737, 36.8737, 36.8737, 36.8737, 36.8737, 36.8737, 36.8737, 36.8737, 36.8737, 36.8737, 36.9187, 36.9637, 37.0087, 37.0537, 37.0987, 37.1437, 37.1437, 37.1437, 37.1437, 37.1437, 37.1437, 37.1437, 37.1437, 37.1437, 37.1437, 37.1437,
+            37.495, 37.545, 37.545, 37.545, 37.545, 37.545, 37.545, 37.545, 37.645, 37.645, 37.745, 37.795, 37.845, 37.845, 37.945, 37.995, 38.045, 38.095, 38.145, 38.195, 38.245, 38.295, 38.345, 38.395, 38.445, 38.495, 38.545, 38.595, 38.645, 38.695,
+            38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.699, 38.7, 38.7, 38.7, 38.7, 38.7, 38.7, 38.7, 38.811
+        ];
 
-       function initCharts() {
-            const ctx = document.getElementById('productionChart').getContext('2d');
-            
-            const labels = [];
-            for(let i=1; i<=31; i++) { labels.push(`${i < 10 ? '0'+i : i}/01/26`); }
-            for(let i=1; i<=28; i++) { labels.push(`${i < 10 ? '0'+i : i}/02/26`); }
-            for(let i=1; i<=31; i++) { labels.push(`${i < 10 ? '0'+i : i}/03/26`); }
-            for(let i=1; i<=30; i++) { labels.push(`${i < 10 ? '0'+i : i}/04/26`); }
-            for(let i=1; i<=31; i++) { labels.push(`${i < 10 ? '0'+i : i}/05/26`); }
+        const realData = [
+            18.046, 18.088, 18.309, 14.476, 14.512, 14.09, 14.052, 14.043, 14.514, 14.057, 14.022, 14.185, 14.612, 14.043, 0.745, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.211, 12.218, 15.546, 16.062,
+            14.534, 13.666, 15.245, 16.069, 18.088, 18.691, 19.542, 18.429, 18.513, 18.713, 19.439, 18.502, 18.562, 18.625, 18.625, 18.682, 20.057, 20.079, 20.108, 20.1, 20.095, 20.116, 20.089, 20.251, 20.385, 20.992, 20.311, 20.196, 20.109,
+            20.308, 20.735, 20.371, 20.454, 20.531, 21.569, 21.428, 21.532, 21.042, 22.502, 23.334, 23.604, 24.07, 24.022, 24.067, 24.031, 24.535, 24.466, 24.529, 24.61, 24.637, 24.615, 24.07, 24.086, 24.06, 24.275, 24.22, 24.216, 24.266, 24.527, 24.629,
+            24.432, 24.405, 24.44, 24.73, 24.451, 24.687, 24.718, 24.558, 26.824, 29, 29.083, 29.069, 29.128, 29.664, 32.079, 34.383, 34.311, 34.424, 34.402, 34.408, 35.019, 35.56, 35.56, 35.692, 35.821, 36.056, 36.046, 36.328, 36.221, 36.412,
+            36.709, 36.715, 36.769, 36.737, 36.922, 36.918, 36.790, 37.055, 36.645, 36.961, 37.022, 37.035, 37.069, 37.032, 36.436, 36.501
+        ];
 
-            const planData = [
-                36.4, 36.4, 36.4, 36.4, 36.4, 36.4, 36.4, 36.45, 36.45, 36.45, 36.45, 36.45, 36.45, 36.45, 36.45, 36.45, 36.45, 36.55, 36.55, 36.55, 36.55, 36.55, 36.6, 36.6, 36.6, 36.6, 36.6, 36.6, 36.6, 36.6, 36.65,
-                36.65, 36.6728, 36.6728, 36.6728, 36.6728, 36.6728, 36.6928, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425,
-                36.8737, 36.8737, 36.8737, 36.8737, 36.8737, 36.8737, 36.8737, 36.8737, 36.8737, 36.8737, 36.8737, 36.8737, 36.8737, 36.8737, 36.8737, 36.9187, 36.9637, 37.0087, 37.0537, 37.0987, 37.1437, 37.1437, 37.1437, 37.1437, 37.1437, 37.1437, 37.1437, 37.1437, 37.1437, 37.1437, 37.1437,
-                37.495, 37.545, 37.545, 37.545, 37.545, 37.545, 37.545, 37.545, 37.645, 37.645, 37.745, 37.795, 37.845, 37.845, 37.945, 37.995, 38.045, 38.095, 38.145, 38.195, 38.245, 38.295, 38.345, 38.395, 38.445, 38.495, 38.545, 38.595, 38.645, 38.695,
-                38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.699, 38.7, 38.7, 38.7, 38.7, 38.7, 38.7, 38.7, 38.811
-            ];
+        const labels = Array.from({length: 154}, (_, i) => {
+            let day = (i % 31) + 1;
+            let month = Math.floor(i / 31) + 1;
+            return `${day.toString().padStart(2, '0')}/${month.toString().padStart(2, '0')}`;
+        });
 
-            const realData = [
-                18.046, 18.088, 18.309, 14.476, 14.512, 14.09, 14.052, 14.043, 14.514, 14.057, 14.022, 14.185, 14.612, 14.043, 0.745, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.211, 12.218, 15.546, 16.062,
-                14.534, 13.666, 15.245, 16.069, 18.088, 18.691, 19.542, 18.429, 18.513, 18.713, 19.439, 18.502, 18.562, 18.625, 18.682, 20.057, 20.079, 20.108, 20.1, 20.095, 20.116, 20.089, 20.251, 20.385, 20.992, 20.311, 20.196, 20.109,
-                20.308, 20.735, 20.371, 20.454, 20.531, 21.569, 21.428, 21.532, 21.042, 22.502, 23.334, 23.604, 24.07, 24.022, 24.067, 24.031, 24.535, 24.466, 24.529, 24.61, 24.637, 24.615, 24.07, 24.086, 24.06, 24.275, 24.22, 24.216, 24.266, 24.527, 24.629,
-                24.432, 24.405, 24.44, 24.73, 24.451, 24.687, 24.718, 24.558, 26.824, 29, 29.083, 29.069, 29.128, 29.664, 32.079, 34.383, 34.311, 34.424, 34.402, 34.408, 35.019, 35.56, 35.56, 35.692, 35.821, 36.056, 36.046, 36.328, 36.221, 36.412,
-                36.709, 36.715, 36.769, 36.737, 36.922, 36.918, 36.790, 37.055, 36.645, 36.961, 37.022, 37.035, 37.069, 37.032
-            ];
+        // 1. Main Production Chart
+        const ctx = document.getElementById('productionChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [
+                    { label: 'REAL (MBD)', data: realData, borderColor: '#1d1d86', backgroundColor: 'rgba(29, 29, 134, 0.1)', borderWidth: 3, fill: true, tension: 0.3, pointRadius: (context) => context.dataIndex === realData.length - 1 ? 6 : 0, pointBackgroundColor: '#dc2626' },
+                    { label: 'PLAN (Points)', data: planData, borderColor: '#dc2626', backgroundColor: '#dc2626', borderWidth: 0, showLine: false, pointRadius: 2, pointStyle: 'circle' }
+                ]
+            },
+            options: { responsive: true, maintainAspectRatio: false, interaction: { intersect: false, mode: 'index' }, plugins: { legend: { display: false } }, 
+                scales: { 
+                    x: { ticks: { font: { size: 9, weight: 'bold' }, color: '#64748b', 
+                        callback: function(val, index) { 
+                            const label = labels[index]; 
+                            if (label && label.startsWith("01/")) { 
+                                const monthNames = ["JAN", "FEB", "MAR", "APR", "MAY"]; 
+                                return monthNames[parseInt(label.split("/")[1]) - 1]; 
+                            } 
+                            return null; 
+                        } 
+                    }, grid: { display: true, color: 'rgba(0,0,0,0.03)' } }, 
+                    y: { beginAtZero: false, min: 0, max: 45, ticks: { font: { size: 10 }, stepSize: 5 }, grid: { color: 'rgba(0,0,0,0.05)' } } 
+                } 
+            }
+        });
 
-            new Chart(ctx, {
+        // 2. Weekly Sparkline
+        const sparkCtx = document.getElementById('weeklySparkline').getContext('2d');
+        const sparkPlan = [37.000, 37.050, 37.100, 37.120, 37.150, 37.180, 37.200]; 
+        const sparkReal = [37.022, 37.035, 37.069, 37.032, 36.436, 36.501, null]; 
+        new Chart(sparkCtx, {
+            type: 'line',
+            data: {
+                labels: ['Mon 11', 'Tue 12', 'Wed 13', 'Thu 14', 'Fri 15', 'Sat 16', 'Sun 17'],
+                datasets: [
+                    { label: 'REAL', data: sparkReal, borderColor: '#22c55e', borderWidth: 2, pointRadius: 4, pointBackgroundColor: '#22c55e', fill: false, tension: 0 },
+                    { label: 'PLAN', data: sparkPlan, borderColor: '#94a3b8', borderWidth: 1.5, borderDash: [2, 2], pointRadius: 0, fill: false, tension: 0 }
+                ]
+            },
+            options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, 
+                scales: { x: { display: false }, y: { display: false, min: 36.0, max: 38.0 } } 
+            }
+        });
+
+        // 3. Financial Charts (Submitted, Approved and Executed)
+        const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+        function initFinChart(canvasId, submitted, approved, executed) {
+            new Chart(document.getElementById(canvasId).getContext('2d'), {
                 type: 'line',
                 data: {
-                    labels: labels,
+                    labels: months,
                     datasets: [
-                        { 
-                            label: 'ACTUAL (MBPD)', 
-                            data: realData, 
-                            borderColor: '#1d1d86', 
-                            backgroundColor: 'rgba(29, 29, 134, 0.1)', 
-                            borderWidth: 3, 
-                            fill: true, 
-                            tension: 0.3,
-                            pointRadius: (context) => context.dataIndex === realData.length - 1 ? 6 : 0, 
-                            pointBackgroundColor: '#dc2626'
-                        },
-                        { 
-                            label: 'PLAN (Dots)', 
-                            data: planData, 
-                            borderColor: '#dc2626', 
-                            backgroundColor: '#dc2626', 
-                            borderWidth: 0, 
-                            showLine: false, 
-                            pointRadius: 2, 
-                            pointStyle: 'circle'
-                        }
+                        { label: 'Submitted', data: submitted, borderColor: '#dc2626', borderWidth: 1.5, borderDash: [4, 4], pointRadius: 0, fill: false, tension: 0.1 },
+                        { label: 'Approved', data: approved, borderColor: '#2563eb', borderWidth: 1.5, borderDash: [4, 4], pointRadius: 0, fill: false, tension: 0.1 },
+                        { label: 'Executed', data: executed, borderColor: '#22c55e', borderWidth: 2.5, pointRadius: 2, fill: false, tension: 0.1 }
                     ]
                 },
                 options: { 
                     responsive: true, 
                     maintainAspectRatio: false, 
-                    interaction: { intersect: false, mode: 'index' }, 
-                    plugins: { 
-                        legend: { display: false }, 
-                        tooltip: { padding: 10, bodyFont: { size: 11, weight: 'bold' } } 
-                    }, 
+                    plugins: { legend: { display: false } }, 
                     scales: { 
-                        x: { 
-                            ticks: { 
-                                maxRotation: 0, 
-                                autoSkip: false, 
-                                font: { size: 9, weight: 'bold' }, 
-                                color: '#64748b', 
-                                callback: function(val, index) { 
-                                    const label = labels[index]; 
-                                    if (label && label.startsWith("01/")) { 
-                                        const monthNames = ["JAN", "FEB", "MAR", "APR", "MAY"]; 
-                                        const monthIndex = parseInt(label.split("/")[1]) - 1; 
-                                        return monthNames[monthIndex]; 
-                                    } 
-                                    return null; 
-                                } 
-                            }, 
-                            grid: { display: true, color: 'rgba(0,0,0,0.03)', drawTicks: false } 
-                        }, 
-                        y: { 
-                            beginAtZero: false, 
-                            min: 0, 
-                            max: 45, 
-                            ticks: { font: { size: 10 }, stepSize: 5 }, 
-                            grid: { color: 'rgba(0,0,0,0.05)' } 
-                        } 
+                        x: { ticks: { font: { size: 8 } }, grid: { display: false } }, 
+                        y: { ticks: { font: { size: 8 } }, grid: { color: 'rgba(0,0,0,0.03)' } } 
                     } 
                 }
             });
-
-            const sparkCtx = document.getElementById('weeklySparkline').getContext('2d');
-            const sparkPlan = [37.000, 37.050, 37.100, 37.120, 37.150, 37.180, 37.200]; 
-            const sparkReal = [37.022, 37.035, 37.069, 37.032, null, null, null]; 
-            
-            new Chart(sparkCtx, {
-                type: 'line',
-                data: {
-                    labels: ['Mon 11', 'Tue 12', 'Wed 13', 'Thu 14', 'Fri 15', 'Sat 16', 'Sun 17'],
-                    datasets: [
-                        { label: 'ACTUAL', data: sparkReal, borderColor: '#22c55e', borderWidth: 2, pointRadius: 4, pointBackgroundColor: '#22c55e', fill: false, tension: 0 },
-                        { label: 'PLAN', data: sparkPlan, borderColor: '#94a3b8', borderWidth: 1.5, borderDash: [2, 2], pointRadius: 0, fill: false, tension: 0 }
-                    ]
-                },
-                options: {
-                    responsive: true, maintainAspectRatio: false,
-                    plugins: { legend: { display: false } },
-                    scales: { x: { display: false }, y: { display: false, min: 36.0, max: 38.0 } }
-                }
-            });
         }
 
-        function initFinancialCharts() {
-            const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-            const commonOptions = {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: { legend: { display: false } },
-                scales: {
-                    x: { ticks: { font: { size: 8 } }, grid: { display: false } },
-                    y: { ticks: { font: { size: 8 } }, grid: { color: 'rgba(0,0,0,0.03)' } }
-                }
-            };
+        // Production CAPEX: S: 10.12 | A: 2.29 | E: 1.15 (Jan-Mar)
+        initFinChart('capexProdChart', 
+            [2.20, 6.22, 10.12, 12.80, 14.39, 16.90, 24.27, 30.81, 41.43, 56.80, 69.99, 83.56],
+            [0.57, 1.22, 2.29, 3.90, 6.78, 11.47, 15.13, 19.63, 23.62, 29.83, 31.99, 34.94],
+            [0.10, 1.31, 1.15, null, null, null, null, null, null, null, null, null]
+        );
 
-            const createFinancialChart = (canvasId, submitted, approved, actual) => {
-                new Chart(document.getElementById(canvasId), {
-                    type: 'line',
-                    data: {
-                        labels: months,
-                        datasets: [
-                            { label: 'Submitted', data: submitted, borderColor: '#94a3b8', borderWidth: 1.5, borderDash: [3,3], pointRadius: 0, fill: false, tension: 0.1 },
-                            { label: 'Approved', data: approved, borderColor: '#1d1d86', borderWidth: 2, pointRadius: 2, fill: false, tension: 0.1 },
-                            { label: 'Actual', data: actual, borderColor: '#c5a059', borderWidth: 3, pointRadius: 3, pointBackgroundColor: '#c5a059', fill: false, tension: 0.1 }
-                        ]
-                    },
-                    options: commonOptions
-                });
-            };
+        // Production OPEX: S: 32.58 | A: 10.45 | E: 9.63 (Jan-Mar)
+        initFinChart('opexProdChart', 
+            [10.86, 21.72, 32.58, 43.44, 54.30, 65.16, 76.02, 86.88, 97.74, 108.6, 119.4, 130.3],
+            [3.48, 6.96, 10.45, 13.93, 17.41, 20.89, 24.37, 27.85, 31.33, 34.81, 38.29, 41.77],
+            [3.21, 6.42, 9.63, null, null, null, null, null, null, null, null, null]
+        );
 
-            createFinancialChart('capexProdChart', 
-                [2.20, 6.22, 10.12, 12.80, 14.39, 16.90, 24.27, 30.81, 41.43, 56.80, 69.99, 83.56],
-                [0.57, 1.22, 2.29, 3.90, 6.78, 11.47, 15.13, 19.63, 23.62, 29.83, 31.99, 34.94],
-                [0.10, 1.31, 1.15, null, null, null, null, null, null, null, null, null]
-            );
+        // Upgrader CAPEX: S: 12.52 | A: 0.18 | E: 4.67 (Jan-Mar)
+        initFinChart('capexMejChart',
+            [1.35, 4.62, 12.52, 17.62, 24.92, 31.02, 37.86, 47.59, 53.93, 62.72, 71.37, 80.63],
+            [0.00, 0.00, 0.18, 2.32, 4.44, 6.52, 9.02, 11.87, 18.57, 18.57, 18.57, 18.57],
+            [0.12, 2.34, 4.67, null, null, null, null, null, null, null, null, null]
+        );
 
-            createFinancialChart('capexMejChart',
-                [1.35, 4.62, 12.52, 17.62, 24.92, 31.02, 37.86, 47.59, 53.93, 62.72, 71.37, 80.63],
-                [0.00, 0.00, 0.18, 2.32, 4.44, 6.52, 9.02, 11.87, 18.57, 25.00, 31.64, 33.71],
-                [4.86, 3.65, 4.67, null, null, null, null, null, null, null, null, null]
-            );
+        // Upgrader OPEX: S: 15.97 | A: 6.62 | E: 12.29 (Jan-Mar)
+        initFinChart('opexMejChart',
+            [5.32, 10.64, 15.97, 21.29, 26.61, 31.93, 37.25, 42.57, 47.89, 53.21, 58.53, 63.85],
+            [2.21, 4.42, 6.62, 8.83, 11.04, 13.25, 15.46, 17.67, 19.88, 22.09, 24.30, 26.51],
+            [4.10, 8.20, 12.29, null, null, null, null, null, null, null, null, null]
+        );
 
-            createFinancialChart('opexProdChart',
-                [10.19, 20.08, 32.58, 46.58, 62.45, 77.72, 91.60, 104.33, 116.46, 129.02, 138.80, 148.59],
-                [2.27, 5.70, 10.45, 18.39, 27.50, 37.81, 47.62, 57.68, 67.23, 74.29, 79.84, 86.49],
-                [3.18, 7.07, 9.63, null, null, null, null, null, null, null, null, null]
-            );
-
-            createFinancialChart('opexMejChart',
-                [4.655, 9.481, 15.974, 20.976, 26.057, 31.082, 36.189, 40.564, 45.272, 50.953, 55.435, 59.982],
-                [1.798, 3.750, 6.618, 9.634, 14.464, 19.509, 24.940, 30.535, 36.220, 43.532, 49.646, 55.730],
-                [5.53, 6.74, 12.29, null, null, null, null, null, null, null, null, null]
-            );
-        }
     </script>
 </body>
 </html>
